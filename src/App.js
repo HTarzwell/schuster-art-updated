@@ -4,6 +4,7 @@ import Navbar from './Navbar/Navbar'
 import Carousel from './Carousel/Carousel'
 import About from './About/About'
 import Artists from './Artists/Artists'
+import Contact from './Contact/Contact'
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Carousel />
         <About />
         <Artists />
+        <Contact />
         <header className="App-header">
           <h1>Schuster Art Consultancy</h1>
         </header>
