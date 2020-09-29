@@ -7,14 +7,6 @@ body {
   display: flex;
 }
 
-nav .nav-title {
-  width: 50%;
-}
-
-nav .nav-menu {
-  width: 50%;
-}
-
 .contact {
   border: 1px solid red;
 }
