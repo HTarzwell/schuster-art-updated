@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Navbar/Navbar'
-import Carousel from './Carousel/Carousel'
+// import Carousel from './Carousel/Carousel'
 import About from './About/About'
 import Artists from './Artists/Artists'
 import Contact from './Contact/Contact'
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <Carousel />
+
         <About />
         <Artists />
         <Contact />
