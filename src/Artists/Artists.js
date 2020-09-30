@@ -1,21 +1,29 @@
 import React from 'react'
-//import { Carousel } from 'react-elastic-carousel';
+import ImageGallery from 'react-image-gallery';
 
 class Artists extends React.Component {
-  state = {
-    artists: [
-    {id: 1, title: 'artist 1'},
-    {id: 2, title: 'artist 2'},
-    {id: 3, title: 'artist 3'},
-    {id: 4, title: 'artist 4'},
-    {id: 5, title: 'artist 5'}
-  ]
-}
+
+
   render() {
-    const { artists } = this.state
+    const images = [
+      {
+        original: 'https://picsum.photos/id/1018/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1018/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1015/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1015/250/150/',
+      },
+      {
+        original: 'https://picsum.photos/id/1019/1000/600/',
+        thumbnail: 'https://picsum.photos/id/1019/250/150/',
+      },
+    ];
+    
     return (
       <div className="artists">
         <h1>This is the ARTISTS component!</h1>
+        <ImageGallery items={images} />
       </div>
     )
   }
