@@ -25,7 +25,6 @@ class Artists extends React.Component {
 
     return (
       <div className="artists">
-        <h1>This is the ARTISTS component!</h1>
         <ImageGallery items={images} />
       </div>
     )

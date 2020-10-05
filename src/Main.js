@@ -17,7 +17,10 @@ class Main extends Component {
         <div className="App">
           <div className="App-header">
             <header>
-              <h1>Schuster Art Consultancy</h1>
+              <div>
+                <div className="splashTitle">schuster</div>
+                <div className="splashSub">art consultancy</div>
+              </div>
             </header>
             <ul>
               <li><NavLink to="/">Artists</NavLink></li>
