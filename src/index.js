@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Main from './Main';
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-less/semantic.less'
+import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(<Main />, document.getElementById('root'));
 

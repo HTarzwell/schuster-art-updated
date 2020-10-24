@@ -16,13 +16,13 @@ class Main extends Component {
       <HashRouter>
         <div className="App">
           <div className="App-header">
-            <header>
-              <div>
-                <div className="splashTitle">schuster</div>
-                <div className="splashSub">art consultancy</div>
-              </div>
-            </header>
             <ul>
+              <header>
+                <div>
+                  <div className="splashTitle">schuster</div>
+                  <div className="splashSub">art consultancy</div>
+                </div>
+              </header>
               <li><NavLink to="/">Artists</NavLink></li>
               <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/contact">Contact</NavLink></li>
