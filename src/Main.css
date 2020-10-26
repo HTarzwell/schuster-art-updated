@@ -100,3 +100,13 @@
   width: 50%;
   color: #343434;
 }
+
+.App-footer {
+  background-color: #343434;
+  color: white;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+}

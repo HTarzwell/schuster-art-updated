@@ -35,6 +35,11 @@ class Main extends Component {
             <Route path="/contact" component={Contact}/>
             <Route path="/favorites" component={Favorites}/>
           </div>
+          <div className="App-footer">
+            <footer>
+              <p>this a footer</p>
+            </footer>
+          </div>
         </div>
       </HashRouter>
     );
