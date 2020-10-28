@@ -9,6 +9,9 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
+import { Button, Form } from 'semantic-ui-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 class Main extends Component {
   render() {
@@ -37,7 +40,27 @@ class Main extends Component {
           </div>
           <div className="App-footer">
             <footer>
-              <p>this a footer</p>
+              <div className="footer-subscribe">
+                <Form id="footer-form">
+                  <Form.Group>
+                    <Form.Field
+                      id='form-footer-input-control-email'>
+                      <label>Subscribe to our newsletter</label>
+                      <input placeholder="Email"/>
+                      </Form.Field>
+                    <Button type='submit' id='footer-submit-button'>SIGN UP</Button>
+                  </Form.Group>
+                </Form>
+              </div>
+              <div className="footer-info">
+                <div>Copyright &copy; 2019 Schuster Art Consultancy</div>
+                <a href = "mailto: info@schusterartconsultancy.com">info@schusterartconsultancy.com</a>
+              </div>
+              <div className="footer-social">
+                <FontAwesomeIcon className="fa-icon" icon={faInstagram} size="2x"/>
+                <FontAwesomeIcon className="fa-icon" icon={faFacebook} size="2x"/>
+                <FontAwesomeIcon className="fa-icon" icon={faTwitter} size="2x"/>
+              </div>
             </footer>
           </div>
         </div>

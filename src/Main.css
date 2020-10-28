@@ -1,4 +1,3 @@
-@import "~react-image-gallery/styles/css/image-gallery.css";
 
 .App {
   text-align: center;
@@ -99,6 +98,10 @@
   flex-direction: column;
   width: 50%;
   color: #343434;
+  text-align: left;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-footer {
@@ -108,5 +111,61 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.App-footer footer {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+}
+
+.App-footer .footer-subscribe {
+  width: 30%;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.App-footer .footer-subscribe #footer-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-footer .footer-subscribe #footer-form #form-footer-input-control-email label {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.App-footer .footer-subscribe #footer-form #footer-submit-button {
+  height: 50%;
+}
+
+.App-footer .footer-info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.App-footer .footer-info a {
+  color: white;
+}
+
+.App-footer .footer-social {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.fa-icon {
+  margin-right: 50px;
 }

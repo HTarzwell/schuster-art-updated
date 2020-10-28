@@ -6,7 +6,7 @@ class Contact extends React.Component {
     return (
       <div className="contact">
         <div className="contact-form">
-          <h2>Interested in an artist?</h2>
+          <h2>Contact Us</h2>
           <Form>
             <Form.Group widths='equal'>
               <Form.Field
@@ -38,7 +38,7 @@ class Contact extends React.Component {
             <Form.Field>
               <Checkbox label='Sign up for our newsletter' />
             </Form.Field>
-            <Button type='submit'>Submit</Button>
+            <Button content="Standard" basic type='submit'>Submit</Button>
           </Form>
         </div>
         <div className="contact-image">
