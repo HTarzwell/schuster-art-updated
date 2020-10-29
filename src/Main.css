@@ -8,6 +8,8 @@
   font-weight: 300;
 }
 
+/* Header main styling full width */
+
 .App-header {
   min-height: 15%;
   display: flex;
@@ -66,6 +68,8 @@
   line-height: 20px;
 }
 
+/* About page main styling full width */
+
 .about {
   display: flex;
   flex-direction: row;
@@ -88,6 +92,8 @@
   max-height: 372px;
 }
 
+/* Contact page main styling full width */
+
 .contact {
   display: flex;
   flex-direction: row;
@@ -103,6 +109,8 @@
   padding-right: 3vmin;
   font-family: 'Roboto', sans-serif;
 }
+
+/* Footer main styling full width */
 
 .App-footer {
   background-color: #343434;
@@ -127,23 +135,13 @@
   padding-left: 50px;
   display: flex;
   align-items: center;
-}
-
-.App-footer .footer-subscribe #footer-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.App-footer .footer-subscribe #footer-form #form-footer-input-control-email label {
-  color: white;
+.App-footer .footer-subscribe #subscribe-label {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-}
-
-.App-footer .footer-subscribe #footer-form #footer-submit-button {
-  height: 50%;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .App-footer .footer-info {

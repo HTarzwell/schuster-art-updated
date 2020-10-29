@@ -7,7 +7,7 @@ class Contact extends React.Component {
       <div className="contact">
         <div className="contact-form">
           <h2>Contact Us</h2>
-          <Form>
+          <Form id="contact-form-semantic">
             <Form.Group widths='equal'>
               <Form.Field
                 id='form-input-control-first-name'
@@ -38,7 +38,7 @@ class Contact extends React.Component {
             <Form.Field>
               <Checkbox label='Sign up for our newsletter' />
             </Form.Field>
-            <Button content="Standard" basic type='submit'>Submit</Button>
+            <Button content="Standard" size="large" type='submit'>Submit</Button>
           </Form>
         </div>
         <div className="contact-image">
