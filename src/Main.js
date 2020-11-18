@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { Label, Container } from "semantic-ui-react";
 
 class Main extends Component {
   render() {
@@ -25,14 +26,16 @@ class Main extends Component {
                   <div className="splashSub">art consultancy</div>
                 </div>
               </header>
-              <li><NavLink to="/">Artists</NavLink></li>
-              <li><NavLink to="/about">About</NavLink></li>
-              <li><NavLink to="/contact">Contact</NavLink></li>
-              <li><NavLink to="/favorites">Favorites</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/artists">Artists</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/favorites">Favorites</NavLink></li>
             </ul>
           </div>
           <div className="App-content">
             <Route exact path="/" component={Artists}/>
+            <Route exact path="/artists" component={Artists}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
             <Route path="/favorites" component={Favorites}/>
@@ -42,14 +45,17 @@ class Main extends Component {
               <div className="footer-subscribe">
                 <div class="ui action input">
                   <div class="ui right pointing label" id="subscribe-label">
-                    Subscribe to our newsletter!
+                    Subscribe to our newsletter:
                   </div>
                   <input type="text" placeholder="Enter your email" />
                     <button class="ui button">SIGN UP</button>
                   </div>
                 </div>
               <div className="footer-info">
-                <div>Copyright &copy; 2019 Schuster Art Consultancy</div>
+                <Container>
+                  <div>Copyright &copy; 2019 Schuster Art Consultancy</div>
+                  <Label ribbon>Designed by Brent C. and developed and built by Leni T.</Label>
+                </Container>
                 <a href = "mailto: info@schusterartconsultancy.com">info@schusterartconsultancy.com</a>
               </div>
               <div className="footer-social">

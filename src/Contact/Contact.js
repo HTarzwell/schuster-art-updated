@@ -6,7 +6,7 @@ class Contact extends React.Component {
     return (
       <div className="contact">
         <div className="contact-form">
-          <h2>Contact Us</h2>
+          <h2>CONTACT US</h2>
           <Form id="contact-form-semantic">
             <Form.Group widths='equal'>
               <Form.Field
@@ -42,7 +42,7 @@ class Contact extends React.Component {
           </Form>
         </div>
         <div className="contact-image">
-          <img src={require('../About/founder_img.png')} alt='i am so sorry'/>
+          <img src={require('./contact_default.png')} alt='image of abstract artwork piece'/>
         </div>
       </div>
     )

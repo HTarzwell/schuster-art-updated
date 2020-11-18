@@ -8,10 +8,16 @@
   font-weight: 300;
 }
 
+.App-content {
+  padding-top: 1vh;
+  margin-bottom: 1vh;
+  font-family: 'Roboto', sans-serif;
+}
+
 /* Header main styling full width */
 
 .App-header {
-  min-height: 15%;
+  min-height: 10%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,19 +32,29 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 5vh;
   width: 85%;
   height: 100%;
 }
 
 .App-header a {
   text-decoration: none;
-  padding: 35px;
+  padding: 1vh;
+  margin-left: 8vh;
   font-size: 24px;
   line-height: 28.13px;
   color: #343434;
+}
+
+.App-header a:hover {
+  background-color: #343434;
+  color: white;
+}
+
+.App-header .active {
+  background-color: #343434;
+  color: white;
 }
 
 .App-header header {
@@ -47,7 +63,7 @@
   left: 0%;
   background-color: #333;
   width: 15%;
-  height: 140px;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,28 +84,64 @@
   line-height: 20px;
 }
 
+/* Artists page main styling full width */
+
+.artists {
+  width: 100%;
+  height: 70vh;
+  border: 3px dotted blue;
+}
+
+.artists-carousel .carousel-body {
+  border: 4px dotted orange;
+  height: 50vh;
+}
+
+.artists-carousel .slider {
+  border: 4px dotted red;
+  height: 100%;
+}
+
+/*
+.artists-carousel {
+  border: 3px dotted red;
+  height: 100%;
+}
+
+.artists .artists-carousel #img-grid {
+  height: 70vh;
+  border: 4px dotted orange;
+}
+
+.artists .artists-carousel #hero {
+  border: 3px solid red;
+  height: 80%;
+}
+
+.artists .artists-carousel #carousel {
+  border: 3px solid blue;
+  height: 20%;
+} */
+
 /* About page main styling full width */
 
 .about {
   display: flex;
   flex-direction: row;
   text-align: left;
+  height: 65vh;
+  width: 100%;
 }
 
 .about-text {
-  width: 40%;
-  margin: 50px;
+  width: 60%;
+  margin-left: 50px;
+  padding-right: 50px;
 }
 
 .about-image {
   width: 40%;
-  margin: 50px;
-  padding: 20px;
-}
-
-.about img {
-  max-width: 620px;
-  max-height: 372px;
+  margin-left: 50px;
 }
 
 /* Contact page main styling full width */
@@ -97,6 +149,8 @@
 .contact {
   display: flex;
   flex-direction: row;
+  height: 65vh;
+  width: 100%;
 }
 
 .contact-form {
@@ -105,9 +159,18 @@
   width: 50%;
   color: #343434;
   text-align: left;
-  padding-left: 3vmin;
-  padding-right: 3vmin;
-  font-family: 'Roboto', sans-serif;
+  padding-left: 50px;
+}
+
+.contact-image {
+  width: 50%;
+  padding-left: 50px;
+  margin-right: 50px;
+}
+
+.contact-image img {
+  max-width: 900px;
+  height: auto;
 }
 
 /* Footer main styling full width */
@@ -115,7 +178,7 @@
 .App-footer {
   background-color: #343434;
   color: white;
-  height: 10vh;
+  height: 8vh;
   position: absolute;
   bottom: 0;
   width: 100%;

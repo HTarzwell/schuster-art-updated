@@ -21,10 +21,7 @@ class About extends React.Component {
           <p>Above all we invite you to experience a world of creativity.</p>
         </div>
         <div className="about-image">
-          <img src={require('./founder_img.png')} alt='not really the founder'/>
-          <h2>TESTIMONIALS</h2>
-          <p>“Working with Susie was the best experience I’ve had while trying to find the right piece of art!”</p>
-          <p>“I’ve worked with art consultants in the past but, Schuster Art Consultancy made the whole process enjoyable and simple”</p>
+          <img src={require('./susie.png')} alt='susan_schuster'/>
         </div>
       </div>
     )
