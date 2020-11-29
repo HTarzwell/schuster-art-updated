@@ -12,6 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { Label, Container } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css';
 
 class Main extends Component {
   render() {
@@ -44,17 +45,15 @@ class Main extends Component {
             <footer>
               <div className="footer-subscribe">
                 <div class="ui action input">
-                  <div class="ui right pointing label" id="subscribe-label">
-                    Subscribe to our newsletter:
-                  </div>
-                  <input type="text" placeholder="Enter your email" />
+                  <Label id="subscribe-label">Subscribe to our newsletter</Label>
+                    <input type="text" placeholder="Enter your email" />
                     <button class="ui button">SIGN UP</button>
                   </div>
                 </div>
               <div className="footer-info">
                 <Container>
-                  <div>Copyright &copy; 2019 Schuster Art Consultancy</div>
-                  <Label ribbon>Designed by Brent C. and developed and built by Leni T.</Label>
+                  <Label ribbon color="black">Copyright &copy; 2019 Schuster Art Consultancy</Label>
+                  <Label ribbon size="mini">Designed by Brent C. and developed and built by Leni T.</Label>
                 </Container>
                 <a href = "mailto: info@schusterartconsultancy.com">info@schusterartconsultancy.com</a>
               </div>
