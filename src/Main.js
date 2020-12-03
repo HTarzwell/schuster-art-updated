@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { Label, Container } from "semantic-ui-react";
+import { Label, Container, Icon } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
 
 class Main extends Component {
@@ -31,7 +31,10 @@ class Main extends Component {
               <li><NavLink exact activeClassName="active" to="/artists">Artists</NavLink></li>
               <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
               <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li>
-              <li><NavLink exact activeClassName="active" to="/favorites">Favorites</NavLink></li>
+              <li><NavLink exact activeClassName="active" to="/favorites">
+                Favorites
+                <Icon corner name="heart" color="red"/>
+              </NavLink></li>
             </ul>
           </div>
           <div className="App-content">
@@ -44,10 +47,10 @@ class Main extends Component {
           <div className="App-footer">
             <footer>
               <div className="footer-subscribe">
-                <div class="ui action input">
+                <div className="ui action input">
                   <Label id="subscribe-label">Subscribe to our newsletter</Label>
                     <input type="text" placeholder="Enter your email" />
-                    <button class="ui button">SIGN UP</button>
+                    <button className="ui button">SIGN UP</button>
                   </div>
                 </div>
               <div className="footer-info">

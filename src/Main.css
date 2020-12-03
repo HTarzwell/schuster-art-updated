@@ -9,8 +9,7 @@
 }
 
 .App-content {
-  padding-top: 1vh;
-  margin-bottom: 1vh;
+  padding-top: 40px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -18,10 +17,10 @@
 
 .App-header {
   min-height: 10%;
+  height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-end;
   width: 100%;
   font-size: calc(10px + 1vmin);
   color: white;
@@ -86,31 +85,42 @@
 /* Artists page main styling full width */
 
 .artists {
-  height: 700px;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .artist-hero {
-  border: 3px dotted red;
-  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.artist-hero #hero {
+  max-height: 50vh;
 }
 
 .artist-carousel {
+  max-height: 20vh;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
-  border: 3px dotted blue;
-  height: 25%;
 }
 
 .leftArrow {
   width: 50px;
   height: 100%;
-  background-color: red;
+  display: flex;
+  align-items: center;
 }
 
 .rightArrow {
   width: 50px;
   height: 100%;
-  background-color: red;
+  display: flex;
+  align-items: center;
 }
 
 /* About page main styling full width */

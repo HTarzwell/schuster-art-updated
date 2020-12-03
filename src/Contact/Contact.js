@@ -38,7 +38,7 @@ class Contact extends React.Component {
             <Form.Field>
               <Checkbox label='Sign up for our newsletter' />
             </Form.Field>
-            <Button content="Standard" size="large" type='submit'>Submit</Button>
+            <Button size="large" type='submit'>Submit</Button>
           </Form>
         </div>
         <div className="contact-image">
