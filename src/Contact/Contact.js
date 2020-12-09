@@ -42,7 +42,7 @@ class Contact extends React.Component {
           </Form>
         </div>
         <div className="contact-image">
-          <img src={require('./contact_default.png')} alt='image of abstract artwork piece'/>
+          <img src={require('./contact_default.png')} alt='abstract artwork piece'/>
         </div>
       </div>
     )
