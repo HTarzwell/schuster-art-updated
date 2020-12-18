@@ -100,6 +100,11 @@
   align-items: center;
 }
 
+.artists .artists-grid-mobile .artists-card {
+  height: 150px;
+  width: 150px;
+}
+
 /* About page main styling full width */
 
 .about {
@@ -111,7 +116,6 @@
 
 .contact {
   display: flex;
-  padding: 2vh;
 }
 
 .contact .contact-form #contact-form-semantic {

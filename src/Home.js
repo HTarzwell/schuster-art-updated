@@ -112,22 +112,22 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="artists-grid-mobile">
-        <HashRouter>
-          {artistsImage.map((artist, index) => {
-            return (
-              <Grid key={index}>
-                <Grid.Column>
-                  <Card className="artist-card" onClick={() => this.loadArtist(artist)}>
-                    <Image src={artist.workPromo} wrapped ui={false}/>
-                    <Card.Content>
-                      <Card.Header>{artist.name}</Card.Header>
-                    </Card.Content>
-                  </Card>
-                </Grid.Column>
-              </Grid>
-            );
-          })}
-          </HashRouter>
+          <HashRouter>
+            {artistsImage.map((artist, index) => {
+              return (
+                <Grid key={index}>
+                  <Grid.Column>
+                    <Card className="artist-card" onClick={() => this.loadArtist(artist)}>
+                      <Image src={artist.workPromo} wrapped ui={false}/>
+                      <Card.Content>
+                        <Card.Header>{artist.name}</Card.Header>
+                      </Card.Content>
+                    </Card>
+                  </Grid.Column>
+                </Grid>
+              );
+            })}
+            </HashRouter>
         </div>
       </div>
     )

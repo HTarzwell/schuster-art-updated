@@ -1,43 +1,43 @@
 
 export const artistsImage = [
     {
-      name: "Dan LaChapelle",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-5.jpg",
+      name: "Cathie Crawford",
+      workPromo: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
       link: '/Dan_LaChapelle',
     },
     {
       name: "Leni Tarzwell",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-6.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
       link: '/Leni_Tarzwell'
     },
     {
       name: "Mike Truk",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-9.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
       link: '/Mike_Truk'
     },
     {
       name: "Bobson Dugnutt",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-8.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
     },
     {
       name: "Hairy Davis",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-5.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
     },
     {
       name: "Brent Fungeburger",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-6.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Moontide 1440.jpg"),
     },
     {
       name: "Alexis Windows",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-9.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Mystic 1440.jpg"),
     },
     {
       name: "Bob Truknutt Junior",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-8.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Nascent 1440.jpg"),
     },
     {
       name: "Snuffles McGee",
-      workPromo: "http://lorempixel.com/output/abstract-q-c-1449-727-9.jpg",
+      workPromo: require("../artist_details/Cathie_Crawford/Noumena 1440.jpg"),
     },
   ]
 
