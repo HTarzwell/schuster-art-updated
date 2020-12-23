@@ -7,7 +7,7 @@ const Carousel = ({item, index}) => {
   return (
     <Transition key={index} mountOnShow={true} unmountOnHide={true} visible={true}>
       <div className="artist-card">
-        <img className= "artist-card-image" src={item.workPromo}/>
+        <img className= "artist-card-image" src={item.workPromo.image}/>
         <div className="artist-card-name">{item.name}</div>
       </div>
     </Transition>
