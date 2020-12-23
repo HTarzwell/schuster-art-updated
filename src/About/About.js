@@ -1,11 +1,10 @@
 import React from 'react'
-import { Segment, Image } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
 
 class About extends React.Component {
   render() {
     return (
       <div className="about">
-        <Segment>
           <div className="about-text">
           <div className="about-image">
             <Image size='small' floated='left' src={require('./susie.png')}/>
@@ -25,7 +24,6 @@ class About extends React.Component {
 
             <p>Above all we invite you to experience a world of creativity.</p>
           </div>
-        </Segment>
       </div>
     )
   }

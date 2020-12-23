@@ -3,12 +3,24 @@ export const artistsImage = [
     {
       name: "Cathie Crawford",
       workPromo: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-      link: '/Dan_LaChapelle',
+      link: '/Cathie_Crawford',
+      works: [
+        require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Mystic 1440.jpg")
+      ]
     },
     {
       name: "Leni Tarzwell",
       workPromo: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
-      link: '/Leni_Tarzwell'
+      link: '/Leni_Tarzwell',
+      works: [
+        require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
+        require("../artist_details/Cathie_Crawford/Mystic 1440.jpg")
+      ]
     },
     {
       name: "Mike Truk",

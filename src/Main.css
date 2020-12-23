@@ -1,9 +1,9 @@
 
 .App {
   text-align: center;
-  background-color: #fff;
+  background: linear-gradient(0.25turn, #fff 80%, #a6a6a6);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -17,7 +17,6 @@
 .App-header {
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 1vmin);
   color: white;
 }
 
@@ -25,7 +24,7 @@
   height: 100px;
   width: 100%;
   top: 0%;
-  background-color: #333;
+  background: linear-gradient(0.75turn, #333 90%, #a6a6a6);
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +38,7 @@
 }
 
 .App-header header .splashSub {
-  font-size: 2.5vh;
+  font-size: 5vw;
   text-transform: uppercase;
 }
 
@@ -47,26 +46,30 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding-right: 3vh;
+  font-size: 5vw;
+}
+
+#menu-heart {
+  display: none;
 }
 
 .App-header ul a {
   text-decoration: none;
-  padding: 0.5vh;
   color: #343434;
+  margin-right: 1vw;
 }
 
 .App-header ul a:hover {
-  background-color: #343434;
+  background-color: #343434;;
   color: white;
 }
 
 .App-header ul .active {
   background-color: #343434;
   color: white;
+  padding: 2vw;
 }
 
 /* Artists page main styling full width */
@@ -110,12 +113,18 @@
 .about {
   display: flex;
   text-align: left;
+  padding: 5vw;
+}
+
+.about .about-text {
+  float: none;
 }
 
 /* Contact page main styling full width */
 
 .contact {
   display: flex;
+  padding: 5vw;
 }
 
 .contact .contact-form #contact-form-semantic {
@@ -127,91 +136,178 @@
 }
 
 /* Footer main styling full width */
+
+.App-footer {
+  background: linear-gradient(0.75turn, #333 90%, #a6a6a6);
+  color: white;
+  height: 25vh;
+  margin-top: 2vh;
+  padding: 2vh;
+  display: flex;
+}
+
+.App-footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.App-footer .footer-subscribe {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.App-footer .footer-info {
+  height: 30%;
+}
+
+.App-footer .footer-social {
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media screen and (min-width: 70em) {
-
-   .App {
-     text-align: center;
-     background-color: red;
-     width: 100%;
-     height: 100%;
-     max-height: 1024px;
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-   }
-
-   .App-content {
-     max-height: 900px;
-     display: flex;
-   }
-
-   /* Header main styling full width */
+/* Header main styling full width */
 
    .App-header {
      display: flex;
-     max-height: 100px;
+     flex-direction: row;
+     align-items: center;
+     height: 10vh;
+     width: 100%;
    }
 
-   header {
-     height: 100px;
-     width: 15%;
-     min-width: 90px;
-     position: absolute;
-     top: 0%;
-     left: 0%;
-     background-color: #333;
+   .App-header header {
+     width: 30vw;
+     height: 10vh;
+     padding: 2.5vh;
    }
 
-   .splashTitle {
-     font-family: 'Helvetica', sans-serif;
-     font-weight: 400;
-     font-size: 6vh;
+   .App-header header .splashTitle {
+     font-size: 3.6em;
+     padding-top: 0;
+     padding-bottom: 1vh;
    }
 
-   .splashSub {
-     font-size: 2.5vh;
-     text-transform: uppercase;
+   .App-header header .splashSub {
+     font-size: 1.4em;
+   }
+
+   .App-header ul {
+     height: 100%;
+     font-size: 2em;
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-around;
+     margin-right: 21vw;
+     margin-left: 4vw;
+     padding-bottom: 2vh;
+   }
+
+   #menu-heart {
+     display: contents;
+   }
+
+   .App-header ul a {
+     margin-right: 0;
+   }
+
+   .App-header ul .active {
+     padding: 1vh;
    }
 
    /* Artists page main styling full width */
 
    .artists {
-     height: 100%;
-     width: 100%;
+     height: 80vh;
      display: flex;
      flex-direction: column;
      align-items: center;
+     padding: 2vh;
    }
 
    .artist-hero {
+     height: 60vh;
      width: 100%;
+     margin-bottom: 2vh;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-around;
+   }
+
+   .artist-hero:hover .leftArrow {
+     height: 100%;
+     display: flex;
+     cursor: pointer;
+     align-items: center;
+   }
+
+   .artist-hero:hover .rightArrow {
+     height: 100%;
+     display: flex;
+     cursor: pointer;
+     align-items: center;
    }
 
    .artist-hero #hero {
-     max-height: 750px;
-     padding-bottom: 40px;
+     height: 59vh;
    }
 
    .artist-carousel {
-     max-height: 20vh;
-     max-width: 100%;
+     height: 18vh;
+     width: 100%;
      display: flex;
      flex-direction: row;
+     justify-content: space-around;
+   }
+
+   .artist-carousel nav {
+     height: 18vh;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+   }
+
+   .artist-card {
+     height: 16vh;
+     width: 8vw;
+   }
+
+   .artist-card .artist-card-image {
+     height: 15vh;
+     width: 7.5vw;
+     opacity: 50%;
+   }
+
+   .artist-card .artist-card-image:hover {
+     transition: 0.3;
+     cursor: pointer;
+     box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+     opacity: 80%;
+   }
+
+   .artist-card .artist-card-image:active {
+     transform: scale(.8);
+     transition: transform .5s ease;
+     opacity: 100%;
+   }
+
+   .artist-card .artist-card-name {
+     font-weight: 400;
+     font-size: 1.25em;
    }
 
    .leftArrow {
-     width: 50px;
-     height: 100%;
-     display: flex;
-     align-items: center;
+     display: none;
    }
 
    .rightArrow {
-     width: 50px;
-     height: 100%;
-     display: flex;
-     align-items: center;
+     display: none;
    }
 
    .artists .artists-grid-mobile {
@@ -221,15 +317,45 @@
    /* About page main styling full width */
 
    .about {
-     display: flex;
      text-align: left;
+     height: 80vh;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding: 5vh;
    }
 
    /* Contact page main styling full width */
 
    .contact {
+     height: 80vh;
      display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 5vh;
    }
 
    /* Footer main styling full width */
- }
+
+   .App-footer {
+     display: flex;
+     height: 8vh;
+     align-items: center;
+     justify-content: space-between;
+   }
+
+   .App-footer .footer-subscribe{
+     height: 100%;
+     width: 33%;
+   }
+
+   .App-footer .footer-social {
+     width: 33%;
+     height: 100%;
+   }
+
+   .App-footer .footer-info {
+     width: 33%;
+     height: 100%;
+   }
+}
