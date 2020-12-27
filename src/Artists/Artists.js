@@ -12,7 +12,7 @@ const Artists = (artist) => {
   const [currentHero, setInitialHero] = useState(null);
   const [currentPositionLeft, setCurrentPositionLeft] = useState(0);
   const [currentPositionRight, setCurrentPositionRight] = useState(8);
-  const maxPositionLeft = useState(0);
+  const maxPositionLeft = 0;
   const [maxPositionRight, setMaxPositionRight] = useState()
   const [animation, setAnimation] = useState(null)
 
@@ -31,17 +31,13 @@ const Artists = (artist) => {
     } else if (direction === "right" && currentPositionRight === maxPositionRight) {
       return;
     } else if (direction === "left" && currentPositionLeft > maxPositionLeft) {
-      useEffect(() => {
         setAnimation("fly right");
-        setCurrentPositionLeft(currentPositionLeft--);
-        setCurrentPositionRight(currentPositionRight--);
-     })
+        setCurrentPositionLeft(currentPositionLeft -= 1);
+        setCurrentPositionRight(currentPositionRight -= 1);
    } else if (direction === "right" && currentPositionRight < 20) {
-     useEffect(() => {
        setAnimation("fly left");
-       setCurrentPositionLeft(currentPositionLeft++);
-       setCurrentPositionRight(currentPositionRight++);
-    })
+       setCurrentPositionLeft(currentPositionLeft += 1);
+       setCurrentPositionRight(currentPositionRight += 1);
   } else {
       console.log('maxRight is ', maxPositionRight);
     }
@@ -67,7 +63,7 @@ const Artists = (artist) => {
           {selectedArtist.works.map((work, index) => {
             return (
               <Transition.Group duration={1000} mountOnShow={true} unmountOnHide={true} visible={true} animation={animation}>
-                {index < currentPositionRight && index >= currentPositionLeft ?
+                {index < currentPositionRight && index > currentPositionLeft ?
                   <div className="artist-card" key={index}>
                     <img className= "artist-card-image" src={work}/>
                   </div> : null

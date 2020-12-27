@@ -61,9 +61,12 @@ class Main extends Component {
                 <a href="mailto: info@schusterartconsultancy.com">info@schusterartconsultancy.com</a>
               </div>
               <div className="footer-social">
-                <FontAwesomeIcon className="fa-icon" icon={faInstagram} size="2x"/>
-                <FontAwesomeIcon className="fa-icon" icon={faFacebook} size="2x"/>
-                <FontAwesomeIcon className="fa-icon" icon={faTwitter} size="2x"/>
+                <a href="https://www.facebook.com/pages/category/Local-Business/Schuster-Art-Consultancy-328435110650312/">
+                  <FontAwesomeIcon className="fa-icon" icon={faFacebook} size="2x"/>
+                </a>
+                <a href="schuster_art_consultancy">
+                  <FontAwesomeIcon className="fa-icon" icon={faInstagram} size="2x"/>
+                </a>
               </div>
             </div>
         </div>
