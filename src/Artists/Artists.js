@@ -9,7 +9,7 @@ import ArtistBio from './Artist_Pages/artist_bio';
 const Artists = (artist) => {
 
   const [selectedArtist, setArtist] = useState();
-  const [currentHero, setInitialHero] = useState(null);
+  const [currentHero, setHero] = useState(null);
   const [currentPositionLeft, setCurrentPositionLeft] = useState(0);
   const [currentPositionRight, setCurrentPositionRight] = useState(8);
   const maxPositionLeft = 0;
@@ -17,13 +17,14 @@ const Artists = (artist) => {
   const [animation, setAnimation] = useState(null)
 
   useEffect(() => {
-    console.log('artist is ', artist.artist.location.artistSelected)
     setArtist(artist.artist.location.artistSelected);
-    if (selectedArtist) {
-      setMaxPositionRight(selectedArtist.works.length);
-      setInitialHero(selectedArtist.works[0])
-    }
   }, []);
+
+  useEffect(() => {
+    if (selectedArtist) {
+      setMaxPositionRight(selectedArtist.works.length)
+    }
+  }, [artist])
 
   const moveCarousel = direction => {
     if (direction === "left" && currentPositionLeft === maxPositionLeft) {
@@ -32,12 +33,12 @@ const Artists = (artist) => {
       return;
     } else if (direction === "left" && currentPositionLeft > maxPositionLeft) {
         setAnimation("fly right");
-        setCurrentPositionLeft(currentPositionLeft -= 1);
-        setCurrentPositionRight(currentPositionRight -= 1);
+        setCurrentPositionLeft(currentPositionLeft - 1);
+        setCurrentPositionRight(currentPositionRight - 1);
    } else if (direction === "right" && currentPositionRight < 20) {
        setAnimation("fly left");
-       setCurrentPositionLeft(currentPositionLeft += 1);
-       setCurrentPositionRight(currentPositionRight += 1);
+       setCurrentPositionLeft(currentPositionLeft + 1);
+       setCurrentPositionRight(currentPositionRight + 1);
   } else {
       console.log('maxRight is ', maxPositionRight);
     }
