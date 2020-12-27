@@ -236,37 +236,86 @@
      margin-bottom: 1vh;
      display: flex;
      justify-content: space-around;
+   }
+
+   .artist-hero .image-wrapper {
+     height: inherit;
+     width: 70%;
      position: relative;
+   }
+
+   .artist-hero .leftArrow {
+     visibility: hidden;
+   }
+
+   .artist-hero .rightArrow {
+     visibility: hidden;
+   }
+
+   .artist-carousel .leftArrow {
+     display: flex;
+     cursor: pointer;
+     align-items: center;
+     opacity: 60%;
+   }
+
+   .artist-carousel .rightArrow {
+     display: flex;
+     cursor: pointer;
+     align-items: center;
+     opacity: 60%;
+   }
+
+   .artist-carousel .rightArrow:hover {
+     transition: 0.3;
+     opacity: 80%;
+     box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+   }
+
+   .artist-carousel .leftArrow:hover {
+     transition: 0.3;
+     opacity: 80%;
+     box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
    }
 
    .artist-hero:hover .leftArrow {
      height: 100%;
      display: flex;
+     visibility: visible;
      cursor: pointer;
      align-items: center;
+     justify-content: flex-start;
+     min-width: 10%;
+     opacity: 70%;
    }
 
    .artist-hero:hover .rightArrow {
      height: 100%;
      display: flex;
+     visibility: visible;
      cursor: pointer;
      align-items: center;
+     justify-content: flex-end;
+     min-width: 10%;
+     opacity: 70%;
    }
 
    .artist-hero #hero {
      height: 59vh;
+     max-width: 95%;
    }
 
    .artist-hero #work-info {
-     height: 7vh;
+     height: 10vh;
      width: 10vw;
      background-color: #343434;
      color: white;
      position: absolute;
-     margin-bottom: 2vh;
-     margin-left: 25vw;
      bottom: 0;
-     left: 0;
+     left: 25%;
+     display: flex;
+     justify-content: flex-start;
+     padding: 2vh;
    }
 
    .artist-carousel {
@@ -304,14 +353,6 @@
    .artist-card .artist-card-name {
      font-weight: 400;
      font-size: 1.25em;
-   }
-
-   .leftArrow {
-     display: none;
-   }
-
-   .rightArrow {
-     display: none;
    }
 
    .artists .artists-grid-mobile {

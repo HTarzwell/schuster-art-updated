@@ -46,7 +46,7 @@ export const artistsImage = [
     {
       name: "Mike Truk",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Nascent 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -55,7 +55,7 @@ export const artistsImage = [
     {
       name: "Bobson Dugnutt",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Samsara III 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -63,7 +63,7 @@ export const artistsImage = [
     {
       name: "Hairy Davis",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Manzoku 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -71,7 +71,7 @@ export const artistsImage = [
     {
       name: "Brent Fungeburger",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Shimmer 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -79,7 +79,7 @@ export const artistsImage = [
     {
       name: "Alexis Windows",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -87,7 +87,7 @@ export const artistsImage = [
     {
       name: "Bob Truknutt Junior",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Spectrum 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },
@@ -95,7 +95,7 @@ export const artistsImage = [
     {
       name: "Snuffles McGee",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+        image: require("../artist_details/Cathie_Crawford/Summer Daze 1440.jpg"),
         info: "lorem ipsum dolor etc.",
         favorite: false
       },

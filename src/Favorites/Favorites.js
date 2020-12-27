@@ -20,7 +20,7 @@ const Favorites = ({favorites}) => {
       </div>
       <div className="artist-carousel">
         <div className="leftArrow" href='#'>
-          <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+          <FontAwesomeIcon className="fa-icon" icon={faChevronLeft}/>
         </div>
           {artistsImage.map((artist, index) => {
             return (
@@ -31,7 +31,7 @@ const Favorites = ({favorites}) => {
           );
           })}
         <div className="rightArrow" href='#'>
-          <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+          <FontAwesomeIcon className="fa-icon" icon={faChevronRight}/>
         </div>
       </div>
     </div>
