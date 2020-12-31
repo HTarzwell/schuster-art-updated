@@ -391,24 +391,66 @@
 
    .about {
      text-align: left;
+     width: 100%;
      height: 80vh;
      display: flex;
      flex-direction: row;
      align-items: center;
-     padding: 5vh;
+     justify-content: center;
+   }
+
+   .about-text-mobile {
+     display: none;
+   }
+
+   .about-fullsize {
+     width: 80%;
+   }
+
+   .about-fullsize .about-text {
+     width: 60%;
+     font-size: 1.15em;
    }
 
    /* Contact page main styling full width */
 
    .contact {
      height: 80vh;
+     width: 100%;
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      align-items: center;
      padding: 5vh;
-   }
+  }
 
-   /* Footer main styling full width */
+  .contact-form {
+    width: 50%;
+    height: 100%;
+    padding: 2vw;
+  }
+
+  .contact .contact-image {
+    display: contents;
+    height: 100%;
+    width: 50%;
+  }
+
+  .contact .contact-image img {
+    max-width: 45vw;
+  }
+
+  /* Favorites page main styling full width */
+
+  .favorites-main {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* Footer main styling full width */
 
    .App-footer {
      display: flex;

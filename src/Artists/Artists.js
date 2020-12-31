@@ -13,34 +13,35 @@ const Artists = (artist) => {
   const [currentPositionLeft, setCurrentPositionLeft] = useState(0);
   const [currentPositionRight, setCurrentPositionRight] = useState(8);
   const maxPositionLeft = 0;
-  const [maxPositionRight, setMaxPositionRight] = useState()
+  const [maxPositionRight, setMaxPositionRight] = useState(null)
   const [animation, setAnimation] = useState(null)
 
   useEffect(() => {
-    setArtist(artist.artist.location.artistSelected);
-  }, []);
+    setArtist(artist.artist.location.artistSelected)
+  }, [artist]);
 
   useEffect(() => {
-    if (selectedArtist) {
-      setMaxPositionRight(selectedArtist.works.length)
-    }
-  }, [artist])
+    selectedArtist ? setMaxPositionRight(selectedArtist.works.length) : setMaxPositionRight(10)
+  })
+
 
   const moveCarousel = direction => {
     if (direction === "left" && currentPositionLeft === maxPositionLeft) {
       return;
     } else if (direction === "right" && currentPositionRight === maxPositionRight) {
-      return;
+      console.log(maxPositionRight)
     } else if (direction === "left" && currentPositionLeft > maxPositionLeft) {
         setAnimation("fly right");
         setCurrentPositionLeft(currentPositionLeft - 1);
         setCurrentPositionRight(currentPositionRight - 1);
-   } else if (direction === "right" && currentPositionRight < 20) {
+   } else if (direction === "right" && currentPositionRight < maxPositionRight) {
        setAnimation("fly left");
        setCurrentPositionLeft(currentPositionLeft + 1);
        setCurrentPositionRight(currentPositionRight + 1);
+       console.log(maxPositionRight)
   } else {
-      console.log('maxRight is ', maxPositionRight);
+    console.log('maxright is ', maxPositionRight)
+      return;
     }
   }
 
@@ -64,7 +65,7 @@ const Artists = (artist) => {
           {selectedArtist.works.map((work, index) => {
             return (
               <Transition.Group duration={1000} mountOnShow={true} unmountOnHide={true} visible={true} animation={animation}>
-                {index < currentPositionRight && index > currentPositionLeft ?
+                {index <= currentPositionRight && index >= currentPositionLeft ?
                   <div className="artist-card" key={index}>
                     <img className= "artist-card-image" src={work}/>
                   </div> : null
