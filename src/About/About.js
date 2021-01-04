@@ -27,10 +27,10 @@ class About extends React.Component {
             </div>
           </div>
           <div className="about-text-mobile">
-          <div className="about-image">
-            <Image size='small' floated='left' src={require('./susie.png')}/>
-          </div>
             <h1>ABOUT SUSIE</h1>
+            <div className="about-image">
+              <Image size='small' floated='left' src={require('./susie.png')}/>
+            </div>
             <p>Schuster Art Consultancy is a specialized business representing a select, exclusive portfolio of global artists. Covering varied and distinct genres of style, each artist brings finely honed technique and exquisite skill to their works.</p>
 
             <p>Whether it is a cityscape, plein air, geometric patterns, or a more contemporary work, the diversity of artistic offerings from Schuster Art Consultancy will provide you with more than just art; you will gain a unique impeccably created piece and a window to the world.</p>

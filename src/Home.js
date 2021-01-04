@@ -106,17 +106,15 @@ class Home extends React.Component {
               return (
                 <Grid>
                   <Grid.Column>
-                    <Card  key={index} className="artist-card">
                     <Link to={{
                       pathname: `/artists/${artist.name}`,
                       artistSelected: artist
                     }}>
-                      <Image src={artist.workPromo} wrapped ui={false}/>
-                      <Card.Content>
-                        <Card.Header>{artist.name}</Card.Header>
-                      </Card.Content>
-                      </Link>
-                    </Card>
+                    <Carousel
+                      item={artist}
+                      index={index}
+                    />
+                    </Link>
                   </Grid.Column>
                 </Grid>
               );
