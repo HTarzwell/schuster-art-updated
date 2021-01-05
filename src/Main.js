@@ -32,10 +32,12 @@ class Main extends Component {
     return (
         <div className="App">
           <div className="App-header">
-              <header>
-                <div className="splashTitle">schuster</div>
-                <div className="splashSub">art consultancy</div>
-              </header>
+                <header>
+                <NavLink className="headerLink" to="/">
+                  <div className="splashTitle">schuster</div>
+                  <div className="splashSub">art consultancy</div>
+                </NavLink>
+                </header>
               <ul>
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>

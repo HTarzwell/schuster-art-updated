@@ -5,6 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import ArtistBio from './Artist_Pages/artist_bio';
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const Artists = (artist) => {
 
@@ -26,21 +27,13 @@ const Artists = (artist) => {
 
 
   const moveCarousel = direction => {
-    if (direction === "left" && currentPositionLeft === maxPositionLeft) {
-      return;
-    } else if (direction === "right" && currentPositionRight === maxPositionRight) {
-      console.log(maxPositionRight)
-    } else if (direction === "left" && currentPositionLeft > maxPositionLeft) {
-        setAnimation("fly right");
-        setCurrentPositionLeft(currentPositionLeft - 1);
-        setCurrentPositionRight(currentPositionRight - 1);
-   } else if (direction === "right" && currentPositionRight < maxPositionRight) {
-       setAnimation("fly left");
-       setCurrentPositionLeft(currentPositionLeft + 1);
-       setCurrentPositionRight(currentPositionRight + 1);
-       console.log(maxPositionRight)
+    if (direction === "left") {
+      setCurrentPositionLeft(currentPositionLeft - 1);
+      setCurrentPositionRight(currentPositionRight - 1);
+   } else if (direction === "right") {
+      setCurrentPositionLeft(currentPositionLeft + 1);
+      setCurrentPositionRight(currentPositionRight + 1);
   } else {
-    console.log('maxright is ', maxPositionRight)
       return;
     }
   }
@@ -53,29 +46,35 @@ const Artists = (artist) => {
           <div className="leftArrow" href='#'>
             <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
           </div>
-          <Image id="hero" src={selectedArtist.workPromo.image}/>
+          <Image id="artist-hero" src={selectedArtist.workPromo.image}/>
           <div className="rightArrow" href='#'>
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
           </div>
         </div>
         <div className="artist-carousel">
-          <div className="leftArrow" href='#'>
-            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" onClick={() => moveCarousel("left")} />
-          </div>
-          {selectedArtist.works.map((work, index) => {
-            return (
-              <Transition.Group duration={1000} mountOnShow={true} unmountOnHide={true} visible={true} animation={animation}>
-                {index <= currentPositionRight && index >= currentPositionLeft ?
+          { currentPositionLeft > maxPositionLeft &&
+            <div className="leftArrow" href='#'>
+              <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" onClick={() => moveCarousel("left")} />
+            </div>
+          }
+          <CSSTransitionGroup className="cssExperimental"
+              transitionName="home-carousel"
+              transitionEnterTimeout={300}
+              transitionLeaveTimeout={300}
+              >
+          {selectedArtist.works.map((work, index) =>
+              (index <= currentPositionRight && index >= currentPositionLeft) ?
                   <div className="artist-card" key={index}>
                     <img className= "artist-card-image" src={work}/>
                   </div> : null
-                }
-              </Transition.Group>
-            )
-          })}
-          <div className="rightArrow" href='#'>
-            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" onClick={() => moveCarousel("right")}/>
-          </div>
+
+              )}
+          </CSSTransitionGroup>
+          { currentPositionRight < maxPositionRight &&
+            <div className="rightArrow" href='#'>
+              <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" onClick={() => moveCarousel("right")}/>
+            </div>
+          }
         </div>
         <div className="artist-showcase">
           <div className="artist-statement">

@@ -6,6 +6,7 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 import { artistsImage } from './Artists/Artist_Pages/artist_information';
 import Carousel from './Artists/Artist_Pages/carousel';
 import { Route, Router, Link } from "react-router-dom";
+import { CSSTransitionGroup } from 'react-transition-group'
 
 class Home extends React.Component {
 
@@ -16,23 +17,22 @@ class Home extends React.Component {
       currentPositionRight: 8,
       maxPositionLeft: 0,
       maxPositionRight: artistsImage.length,
-      animation: null,
-      activeCarouselItem: 0,
+      currentHeroPosition: 0,
+      maxHeroPositionLeft: 0,
+      maxHeroPositionRight: artistsImage.length - 1
     }
 
 
   changeHeroImage = direction => {
-    if (direction === "left" && this.state.currentPositionLeft > this.state.maxPositionLeft) {
+    if (direction === "left") {
       this.setState({
-        currentPositionLeft: this.state.currentPositionLeft -= 1,
-        currentHero: artistsImage[this.state.currentPositionLeft].workPromo,
-        activeCarouselItem: this.state.activeCarouselItem -= 1,
+        currentHeroPosition: this.state.currentHeroPosition -= 1,
+        currentHero: artistsImage[this.state.currentHeroPosition].workPromo,
       })
-    } else if (direction === "right" && this.state.currentPositionRight < this.state.maxPositionRight) {
+    } else if (direction === "right") {
       this.setState({
-        currentPositionLeft: this.state.currentPositionLeft +=1,
-        currentHero: artistsImage[this.state.currentPositionLeft].workPromo,
-        activeCarouselItem: this.state.activeCarouselItem +=1
+        currentHeroPosition: this.state.currentHeroPosition +=1,
+        currentHero: artistsImage[this.state.currentHeroPosition].workPromo,
       })
     } else {
       return;
@@ -40,24 +40,18 @@ class Home extends React.Component {
   }
 
   moveCarousel = direction => {
-    if (direction === "left" && this.state.currentPositionLeft === this.state.maxPositionLeft) {
-      return;
-    } else if (direction === "right" && this.state.currentPositionRight === this.state.maxPositionRight) {
-      return;
-    } else if (direction === "left" && this.state.currentPositionLeft > this.state.maxPositionLeft) {
+    if (direction === "left") {
       this.setState({
-        animation: "fly right",
         currentPositionLeft: this.state.currentPositionLeft -= 1,
         currentPositionRight: this.state.currentPositionRight -= 1
      })
-   } else if (direction === "right" && this.state.currentPositionRight < this.state.maxPositionRight) {
+   } else if (direction === "right") {
      this.setState({
-       animation: "fly left",
        currentPositionRight: this.state.currentPositionRight += 1,
        currentPositionLeft: this.state.currentPositionLeft +=1
     })
     } else {
-      console.log('dics');
+      return;
     }
   }
 
@@ -65,26 +59,35 @@ class Home extends React.Component {
     return (
       <div className="artists">
         <div className="artist-hero">
+
           <div className="leftArrow" href='#' onClick={() => this.changeHeroImage("left")}>
-            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+            { this.state.currentHeroPosition > this.state.maxHeroPositionLeft &&
+              <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+            }
           </div>
             <div className="image-wrapper">
               <img id="hero" src={this.state.currentHero.image}/>
-              <div id="work-info">{this.state.currentHero.info}</div>
             </div>
+        { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&
           <div className="rightArrow" href='#' onClick={() => this.changeHeroImage("right")}>
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
           </div>
+        }
         </div>
         <div className="artist-carousel">
           <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
+          {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
             <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+          }
           </div>
+        <CSSTransitionGroup className="cssExperimental"
+            transitionName="home-carousel"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+            >
             {artistsImage.map((artist, index) =>
-              (
-                <Transition.Group duration={1000} mountOnShow={true} unmountOnHide={true} visible={true} animation={this.state.animation}>
-                {(index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
-                <Link to={{
+              (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
+                <Link key={index} exact className="artistLinks" to={{
                   pathname: `/artists/${artist.name}`,
                   artistSelected: artist
                 }}>
@@ -93,13 +96,14 @@ class Home extends React.Component {
                     index={index}
                   />
                 </Link>
-               : null }
-                </Transition.Group>
-              )
+               : null
             )}
+            </CSSTransitionGroup>
+        {(this.state.currentPositionRight < this.state.maxPositionRight) &&
           <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
           </div>
+        }
         </div>
         <div className="artists-grid-mobile">
             {artistsImage.map((artist, index) => {
@@ -148,7 +152,7 @@ export default Home
 // onClickRightCarouselArrow = () => {
 //   this.moveCarouselLeft()
 // }
-//
+// <Transition.Group duration={1500} mountOnShow={true} unmountOnHide={true} visible={true} animation={this.state.animation}>
 // onClickLeftCarouselArrow = () => {
 //   this.moveCarouselRight()
 // }

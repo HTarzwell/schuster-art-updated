@@ -32,6 +32,10 @@
   flex-direction: column;
 }
 
+.App-header header .headerLink {
+  color: inherit;
+}
+
 .App-header header .splashTitle {
   font-family: 'Helvetica', sans-serif;
   font-weight: 400;
@@ -143,7 +147,13 @@
   text-align: left;
 }
 
+.artistLinks {
+  color: #343434;
+}
 
+.artistLinks:hover {
+  color: black;
+}
 
 /* About page main styling full width */
 
@@ -305,10 +315,26 @@
    }
 
    .artist-hero .leftArrow {
-     visibility: hidden;
+     height: 100%;
+     display: flex;
+     width: 15%;
+     align-items: center;
+     justify-content: center;
    }
 
    .artist-hero .rightArrow {
+     height: 100%;
+     display: flex;
+     width: 15%;
+     align-items: center;
+     justify-content: center;
+   }
+
+   .artist-hero .rightArrow .fa-icon {
+     visibility: hidden;
+   }
+
+   .artist-hero .leftArrow .fa-icon {
      visibility: hidden;
    }
 
@@ -328,37 +354,25 @@
 
    .artist-carousel .rightArrow:hover {
      transition: 0.3;
-     opacity: 80%;
-     box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+     opacity: 90%;
    }
 
    .artist-carousel .leftArrow:hover {
      transition: 0.3;
-     opacity: 80%;
-     box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+     opacity: 90%;
    }
 
-   .artist-hero:hover .leftArrow {
-     height: 100%;
-     display: flex;
+  .artist-hero:hover .leftArrow .fa-icon {
      visibility: visible;
      cursor: pointer;
-     align-items: center;
-     justify-content: flex-start;
-     min-width: 10%;
      opacity: 70%;
    }
 
-   .artist-hero:hover .rightArrow {
-     height: 100%;
-     display: flex;
-     visibility: visible;
-     cursor: pointer;
-     align-items: center;
-     justify-content: flex-end;
-     min-width: 10%;
-     opacity: 70%;
-   }
+   .artist-hero:hover .rightArrow .fa-icon {
+      visibility: visible;
+      cursor: pointer;
+      opacity: 70%;
+    }
 
    .artist-hero #hero {
      height: 59vh;
@@ -382,8 +396,35 @@
      height: 18vh;
      width: 100%;
      display: flex;
+   }
+
+   .cssExperimental {
+     width: 100%;
+     display: flex;
      flex-direction: row;
      justify-content: space-around;
+   }
+
+   .home-carousel-enter {
+     opacity: 0.01;
+     width: 0vw;
+   }
+
+   .home-carousel-enter.home-carousel-enter-active {
+     opacity: 1;
+     width: 8vw;
+     transition: 300ms;
+   }
+
+   .home-carousel-leave {
+     opacity: 1;
+     width: 8vw;
+   }
+
+   .home-carousel-leave.home-carousel-leave-active {
+     opacity: 0.01;
+     width: 0vw;
+     transition: 300ms;
    }
 
    .artist-card {
@@ -463,8 +504,9 @@
      display: none;
    }
 
-   .about-fullsize {
+   .about .about-fullsize {
      width: 80%;
+     display: content;
    }
 
    .about-fullsize .about-text {

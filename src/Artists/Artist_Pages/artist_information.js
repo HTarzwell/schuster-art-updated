@@ -109,6 +109,14 @@ export const artistsImage = [
         favorite: false
       },
     },
+    {
+      name: "Angela Difranco",
+      workPromo: {
+        image: require("../artist_details/Cathie_Crawford/Summer Soleil 1440.jpg"),
+        info: "lorem ipsum dolor etc.",
+        favorite: false
+      },
+    },
   ]
 
   export default {
