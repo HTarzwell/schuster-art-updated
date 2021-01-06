@@ -1,0 +1,48 @@
+/* About page styling mobile */
+
+.about {
+  display: flex;
+  height: 100%;
+  padding: 5vw;
+  text-align: left;
+}
+
+.about .about-fullsize {
+  display: none;
+}
+
+.about .about-text {
+  float: none;
+}
+
+.about .about-text h1 {
+  text-align: center;
+}
+
+/* About page styling desktop */
+
+@media screen and (min-width: 70em) {
+  .about {
+    text-align: left;
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-text-mobile {
+    display: none;
+  }
+
+  .about .about-fullsize {
+    width: 80%;
+    display: content;
+  }
+
+  .about-fullsize .about-text {
+    width: 60%;
+    font-size: 1.15em;
+  }
+}

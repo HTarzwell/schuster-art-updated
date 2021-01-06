@@ -1,4 +1,5 @@
 import React from 'react';
+import './Contact.css'
 import { Button, Checkbox, Form, Input, TextArea, Transition, Message } from 'semantic-ui-react';
 import emailjs from 'emailjs-com';
 

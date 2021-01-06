@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './About.css';
 import { Image } from 'semantic-ui-react';
 
 class About extends React.Component {

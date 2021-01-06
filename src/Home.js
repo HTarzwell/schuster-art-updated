@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css'
 import { Card, Image, Transition, Grid } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -57,55 +58,52 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="artists">
-        <div className="artist-hero">
-
+      <div className="home">
+      <div className="home-carousel">
+        <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
+        {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
+          <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+        }
+        </div>
+      <CSSTransitionGroup className="cssExperimental"
+          transitionName="homeCarousel"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+          >
+          {artistsImage.map((artist, index) =>
+            (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
+              <Link key={index} exact className="artistLinks" to={{
+                pathname: `/artists/${artist.name}`,
+                artistSelected: artist
+              }}>
+                <Carousel
+                  item={artist}
+                  index={index}
+                />
+              </Link>
+             : null
+          )}
+          </CSSTransitionGroup>
+      {(this.state.currentPositionRight < this.state.maxPositionRight) &&
+        <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
+          <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+        </div>
+      }
+      </div>
+        <div className="home-hero">
           <div className="leftArrow" href='#' onClick={() => this.changeHeroImage("left")}>
             { this.state.currentHeroPosition > this.state.maxHeroPositionLeft &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
             }
           </div>
-            <div className="image-wrapper">
-              <img id="hero" src={this.state.currentHero.image}/>
-            </div>
-        { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&
+              <img id="homeHero" src={this.state.currentHero.image}/>
           <div className="rightArrow" href='#' onClick={() => this.changeHeroImage("right")}>
+          { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
-          </div>
-        }
-        </div>
-        <div className="artist-carousel">
-          <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
-          {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
-            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
           }
           </div>
-        <CSSTransitionGroup className="cssExperimental"
-            transitionName="home-carousel"
-            transitionEnterTimeout={300}
-            transitionLeaveTimeout={300}
-            >
-            {artistsImage.map((artist, index) =>
-              (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
-                <Link key={index} exact className="artistLinks" to={{
-                  pathname: `/artists/${artist.name}`,
-                  artistSelected: artist
-                }}>
-                  <Carousel
-                    item={artist}
-                    index={index}
-                  />
-                </Link>
-               : null
-            )}
-            </CSSTransitionGroup>
-        {(this.state.currentPositionRight < this.state.maxPositionRight) &&
-          <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
-            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
-          </div>
-        }
         </div>
-        <div className="artists-grid-mobile">
+        <div className="home-grid-mobile">
             {artistsImage.map((artist, index) => {
               return (
                 <Grid>
@@ -130,35 +128,3 @@ class Home extends React.Component {
 }
 
 export default Home
-
-
-//
-// moveCarouselRight = () => {
-//   this.setState({
-//     animation: "slide right",
-//     hiddenIndex: this.state.transitioningIndex,
-//     transitioningIndex: this.state.hiddenIndex
-//   })
-// }
-//
-// moveCarouselLeft = () => {
-//   this.setState({
-//     animation: "slide left",
-//     hiddenIndex: this.state.transitioningIndex,
-//     transitioningIndex: this.state.hiddenIndex
-//   })
-// }
-//
-// onClickRightCarouselArrow = () => {
-//   this.moveCarouselLeft()
-// }
-// <Transition.Group duration={1500} mountOnShow={true} unmountOnHide={true} visible={true} animation={this.state.animation}>
-// onClickLeftCarouselArrow = () => {
-//   this.moveCarouselRight()
-// }
-//
-
-//
-// loadArtist = artist => {
-//   console.log('artist is ', artist)
-// }

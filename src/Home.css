@@ -1,0 +1,217 @@
+/* Artists page main styling full width */
+
+.home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-hero {
+  display: none;
+}
+
+.home-carousel {
+  display: none;
+}
+
+.home .leftArrow {
+  display: none;
+}
+
+.home .rightArrow {
+  display: none;
+}
+
+.home .home-grid-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .home-grid-mobile .artist-card img {
+  max-height: 30vh;
+  max-width: 80vw;
+}
+
+.home .artist-select {
+  height: 100%;
+}
+
+.artistLinks {
+  color: #343434;
+}
+
+.artistLinks:hover {
+  color: black;
+}
+
+@media screen and (min-width: 70em) {
+
+     .home {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       height: 85vh;
+     }
+
+     .home-hero {
+       height: 63vh;
+       width: 100%;
+       display: flex;
+       justify-content: space-around;
+       border: 3px dotted orange;
+     }
+
+     .home-hero #homeHero {
+       max-height: 60vh;
+       max-width: 120vw;
+     }
+
+     .home-hero .leftArrow {
+       height: 100%;
+       display: flex;
+       width: 15%;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .home-hero .rightArrow {
+       height: 100%;
+       display: flex;
+       width: 15%;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .home-hero .rightArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .home-hero .leftArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .home-carousel {
+       overflow: hidden;
+     }
+
+     .home-carousel .leftArrow {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 5vw;
+     }
+
+     .home-carousel .rightArrow {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 5vw;
+     }
+
+     .home-carousel .rightArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .home-carousel .leftArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .home-carousel:hover .rightArrow .fa-icon {
+       transition: 0.3;
+       visibility: visible;
+       opacity: 70%;
+     }
+
+     .home-carousel:hover .leftArrow .fa-icon{
+       transition: 0.3;
+       visibility: visible;
+       opacity: 70%;
+     }
+
+    .home-hero:hover .leftArrow .fa-icon {
+      visibility: visible;
+      cursor: pointer;
+      opacity: 70%;
+    }
+
+    .home-hero:hover .rightArrow .fa-icon {
+      visibility: visible;
+      cursor: pointer;
+      opacity: 70%;
+    }
+
+     .home-hero #homeHero {
+       height: 59vh;
+       max-width: 95%;
+     }
+
+     .home .home-carousel {
+       height: 18vh;
+       width: 100%;
+       display: flex;
+     }
+
+     .cssExperimental {
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+     }
+
+     .homeCarousel-enter {
+       opacity: 0.01;
+       width: 0vw;
+     }
+
+     .homeCarousel-enter.homeCarousel-enter-active {
+       opacity: 1;
+       width: 8vw;
+       transition: 300ms;
+     }
+
+     .homeCarousel-leave {
+       opacity: 1;
+       width: 8vw;
+     }
+
+     .homeCarousel-leave.homeCarousel-leave-active {
+       opacity: 0.01;
+       width: 0vw;
+       transition: 300ms;
+     }
+
+     .artist-card {
+       height: 18vh;
+       width: 9vw;
+     }
+
+     .artist-card .artist-card-image {
+       height: 16vh;
+       width: 8vw;
+       opacity: 50%;
+     }
+
+     .artist-card .artist-card-image:hover {
+       transition: 0.3;
+       cursor: pointer;
+       box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+       opacity: 80%;
+     }
+
+     .artist-card .artist-card-image:active {
+       transform: scale(.8);
+       transition: transform .5s ease;
+       opacity: 100%;
+     }
+
+     .artist-card .artist-card-name {
+       font-weight: 400;
+       font-size: 1.25em;
+     }
+
+     .home .home-grid-mobile {
+       display: none;
+     }
+}

@@ -1,0 +1,17 @@
+/* Favorites styling mobile */
+
+.favorites-main {
+  height: 64vh;
+}
+
+/* Favorites page main styling full width */
+@media screen and (min-width: 70em) {
+  .favorites-main {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}

@@ -1,0 +1,203 @@
+/* Artists styling mobile */
+
+.artist-select {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-select .artist-hero {
+  display: none;
+}
+
+.artist-select .artist-carousel {
+  display: none;
+}
+
+.artist-select .leftArrow {
+  display: none;
+}
+
+.artist-select .rightArrow {
+  display: none;
+}
+
+.artist-select .artist-page {
+  height: 100%;
+}
+
+.artist-select .artist-page .artist-showcase {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.artist-select .artist-page .artist-showcase .artist-photo {
+  width: 35%;
+}
+
+.artist-select .artist-page .artist-showcase .artist-photo img {
+  max-width: 30vw;
+  max-height: 45vh;
+}
+
+.artist-select .artist-page .artist-showcase .artist-statement {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media screen and (min-width: 70em) {
+
+     .artist-select {
+       height: 100%;
+     }
+
+     .artist-select .artist-hero {
+       height: 62vh;
+       width: 100%;
+       margin-bottom: 1vh;
+       display: flex;
+       justify-content: space-around;
+     }
+
+     .artist-select .artist-hero .image-wrapper {
+       height: inherit;
+       width: 70%;
+       position: relative;
+     }
+
+     .artist-hero .leftArrow {
+       height: 100%;
+       display: flex;
+       width: 15%;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .artist-hero .rightArrow {
+       height: 100%;
+       display: flex;
+       width: 15%;
+       align-items: center;
+       justify-content: center;
+     }
+
+     .artist-carousel .leftArrow {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 5vw;
+     }
+
+     .artist-carousel .rightArrow {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 5vw;
+     }
+
+     .artist-hero .rightArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .artist-hero .leftArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .artist-carousel .rightArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .artist-carousel .leftArrow .fa-icon {
+       visibility: hidden;
+     }
+
+     .artist-carousel:hover .rightArrow .fa-icon {
+       transition: 0.3;
+       visibility: visible;
+       opacity: 70%;
+     }
+
+     .artist-carousel:hover .leftArrow .fa-icon{
+       transition: 0.3;
+       visibility: visible;
+       opacity: 70%;
+     }
+
+    .artist-hero:hover .leftArrow .fa-icon {
+      visibility: visible;
+      cursor: pointer;
+      opacity: 70%;
+    }
+
+    .artist-hero:hover .rightArrow .fa-icon {
+      visibility: visible;
+      cursor: pointer;
+      opacity: 70%;
+    }
+
+     .artist-select .artist-carousel {
+       height: 18vh;
+       width: 100%;
+       display: flex;
+     }
+
+     .cssExperimental {
+       width: 100%;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+     }
+
+     .artistCarousel-enter {
+       opacity: 0.01;
+       width: 0vw;
+     }
+
+     .artistCarousel-enter.artistCarousel-enter-active {
+       opacity: 1;
+       width: 8vw;
+       transition: 300ms;
+     }
+
+     .artistCarousel-leave {
+       opacity: 1;
+       width: 8vw;
+     }
+
+     .artistCarousel-leave.artistCarousel-leave-active {
+       opacity: 0.01;
+       width: 0vw;
+       transition: 300ms;
+     }
+
+     .artist-select .artist-page .artist-showcase {
+       height: 50vh;
+       width: 100%;
+       display: flex;
+       justify-content: center;
+     }
+
+     .artist-select .artist-page .artist-showcase .artist-photo {
+       width: 35%;
+     }
+
+     .artist-select .artist-page .artist-showcase .artist-statement {
+       width: 45%;
+       height: 50vh;
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+     }
+
+     .artist-select .artist-page .artist-showcase .artist-photo img {
+       max-width: 30vw;
+       max-height: 45vh;
+     }
+
+     .artist-select .artist-hero .image-wrapper #artistWorkDetails {
+       color: #343434;
+     }
+}

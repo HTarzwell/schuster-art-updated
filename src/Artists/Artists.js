@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
+import './Artists.css'
 import Carousel from './Artist_Pages/carousel';
-import { Image, Transition } from 'semantic-ui-react';
+import { Image, Modal, Button, Label } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -16,15 +17,24 @@ const Artists = (artist) => {
   const maxPositionLeft = 0;
   const [maxPositionRight, setMaxPositionRight] = useState(null)
   const [animation, setAnimation] = useState(null)
+  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     setArtist(artist.artist.location.artistSelected)
-  }, [artist]);
+  }, []);
+
 
   useEffect(() => {
     selectedArtist ? setMaxPositionRight(selectedArtist.works.length) : setMaxPositionRight(10)
-  })
+  }, [selectedArtist])
 
+  useEffect(() => {
+    selectedArtist ? setHero(selectedArtist.works[0]) : setHero('')
+  }, [selectedArtist])
+
+  const changeHeroImage = index => {
+    setHero(selectedArtist.works[index])
+  }
 
   const moveCarousel = direction => {
     if (direction === "left") {
@@ -39,42 +49,64 @@ const Artists = (artist) => {
   }
 
   return (
-    <div className="artists artist-select">
+    <div className="artist-select">
       { selectedArtist ?
       (<div className="artist-page">
         <div className="artist-hero">
           <div className="leftArrow" href='#'>
+          { currentPositionLeft > maxPositionLeft &&
             <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+          }
           </div>
-          <Image id="artist-hero" src={selectedArtist.workPromo.image}/>
+          <Image id="artistHero" src={currentHero} onClick={() => setOpen(true)}/>
+          <Modal
+            basic
+            closeIcon
+            as={Image}
+            open={open}
+            size="large"
+            onClose={() => setOpen(false)}
+            onOpen={() => setOpen(true)}
+            dimmer="blurring"
+          >
+            <Modal.Content>
+              <Label id="artistWorkDetails" size="massive" ribbon as='a'>
+                {selectedArtist.workPromo.info}
+              </Label>
+              <Image size='massive'
+                      src={currentHero}
+                       />
+            </Modal.Content>
+          </Modal>
           <div className="rightArrow" href='#'>
+          { currentPositionRight < maxPositionRight &&
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+          }
           </div>
         </div>
         <div className="artist-carousel">
-          { currentPositionLeft > maxPositionLeft &&
-            <div className="leftArrow" href='#'>
+          <div className="leftArrow" href='#'>
+            { currentPositionLeft > maxPositionLeft &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" onClick={() => moveCarousel("left")} />
-            </div>
-          }
+            }
+          </div>
           <CSSTransitionGroup className="cssExperimental"
-              transitionName="home-carousel"
+              transitionName="artistCarousel"
               transitionEnterTimeout={300}
               transitionLeaveTimeout={300}
               >
-          {selectedArtist.works.map((work, index) =>
-              (index <= currentPositionRight && index >= currentPositionLeft) ?
-                  <div className="artist-card" key={index}>
+              {selectedArtist.works.map((work, index) =>
+                (index <= currentPositionRight && index >= currentPositionLeft) ?
+                  <div className="artist-card" key={index} onClick={() => changeHeroImage(index)}>
                     <img className= "artist-card-image" src={work}/>
                   </div> : null
-
               )}
           </CSSTransitionGroup>
-          { currentPositionRight < maxPositionRight &&
-            <div className="rightArrow" href='#'>
+          <div className="rightArrow" href='#'>
+            { currentPositionRight < maxPositionRight &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" onClick={() => moveCarousel("right")}/>
-            </div>
-          }
+            }
+          </div>
         </div>
         <div className="artist-showcase">
           <div className="artist-statement">
