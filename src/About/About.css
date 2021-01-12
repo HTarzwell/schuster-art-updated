@@ -11,25 +11,22 @@
   display: none;
 }
 
-.about .about-text {
+.about .about-text-mobile {
   float: none;
 }
 
-.about .about-text h1 {
+.about .about-text-mobile h1 {
   text-align: center;
 }
 
 /* About page styling desktop */
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 75em) {
   .about {
-    text-align: left;
     width: 100%;
-    height: 83vh;
+    height: 84vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    padding: 2vh;
   }
 
   .about-text-mobile {
@@ -37,12 +34,26 @@
   }
 
   .about .about-fullsize {
-    width: 80%;
-    display: content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
   .about-fullsize .about-text {
-    width: 60%;
-    font-size: 1.15em;
+    max-width: 50%;
+    font-size: 1.2em;
+    margin-left: 5vw;
+    height: 70vh;
+  }
+
+  .about-fullsize .about-image {
+    max-width: 50%;
+    height: 70vh;
+  }
+
+  .about .about-text h1 {
+    text-align: left;
   }
 }

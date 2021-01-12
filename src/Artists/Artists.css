@@ -27,45 +27,91 @@
   height: 100%;
 }
 
-.artist-select .artist-page .artist-showcase {
+.artist-select .artist-page .artist-showcase-fullsize {
+  display: none;
+}
+
+.artist-select .artist-page .artist-showcase-mobile {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.artist-select .artist-page .artist-showcase .artist-photo {
+.artist-select .artist-page .artist-showcase-mobile .artist-photo {
   width: 35%;
 }
 
-.artist-select .artist-page .artist-showcase .artist-photo img {
+.artist-select .artist-page .artist-showcase-mobile .artist-photo img {
   max-width: 30vw;
   max-height: 45vh;
 }
 
-.artist-select .artist-page .artist-showcase .artist-statement {
+.artist-select .artist-page .artist-showcase-mobile .artist-statement {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-@media screen and (min-width: 70em) {
+.artist-select .artist-grid-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-select .artist-grid-mobile #artist-mobile-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.artist-select .artist-grid-mobile .artist-card {
+  height: 22vh;
+  width: 46vw;
+}
+
+.artist-select .artist-grid-mobile .artist-card img {
+  height: 18vh;
+  width: 42vw;
+  opacity: 50%;
+}
+
+.artist-select .artist-grid-mobile .artist-card .artist-card:hover {
+  transition: 0.3;
+  cursor: pointer;
+  box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+  opacity: 80%;
+}
+
+.artist-select .artist-grid-mobile .artist-card .artist-card:active {
+  transform: scale(.8);
+  transition: transform .5s ease;
+  opacity: 100%;
+}
+
+.artist-select .artist-grid-mobile .artist-card .artist-card-name {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 75em) {
 
      .artist-select {
-       height: 100%;
+       display: flex;
+       flex-direction: column;
+       height: 152vh;
+       padding-bottom: 2vh;
+       padding-top: 1vh;
      }
 
      .artist-select .artist-hero {
-       height: 62vh;
+       height: 75vh;
        width: 100%;
-       margin-bottom: 1vh;
        display: flex;
        justify-content: space-around;
      }
 
      .artist-select .artist-hero .image-wrapper {
-       height: inherit;
-       width: 70%;
-       position: relative;
+       height: 73vh;
+       max-width: 70%;
      }
 
      .artist-hero .leftArrow {
@@ -139,9 +185,10 @@
     }
 
      .artist-select .artist-carousel {
-       height: 18vh;
+       height: 24vh;
        width: 100%;
        display: flex;
+          border: 3px dotted orange;
      }
 
      .cssExperimental {
@@ -154,6 +201,14 @@
      .artistCarousel-enter {
        opacity: 0.01;
        width: 0vw;
+     }
+
+     .artist-select .artist-page .artist-showcase-mobile {
+       display: none;
+     }
+
+     .artist-select .artist-page .artist-grid-mobile {
+       display: none;
      }
 
      .artistCarousel-enter.artistCarousel-enter-active {
@@ -173,18 +228,20 @@
        transition: 300ms;
      }
 
-     .artist-select .artist-page .artist-showcase {
+     .artist-select .artist-page .artist-showcase-fullsize {
        height: 50vh;
        width: 100%;
        display: flex;
        justify-content: center;
+       padding-top: 2vh;
+          border: 3px dotted blue;
      }
 
-     .artist-select .artist-page .artist-showcase .artist-photo {
+     .artist-select .artist-page .artist-showcase-fullsize .artist-photo {
        width: 35%;
      }
 
-     .artist-select .artist-page .artist-showcase .artist-statement {
+     .artist-select .artist-page .artist-showcase-fullsize .artist-statement {
        width: 45%;
        height: 50vh;
        display: flex;
@@ -192,7 +249,7 @@
        text-align: left;
      }
 
-     .artist-select .artist-page .artist-showcase .artist-photo img {
+     .artist-select .artist-page .artist-showcase-fullsize .artist-photo img {
        max-width: 30vw;
        max-height: 45vh;
      }

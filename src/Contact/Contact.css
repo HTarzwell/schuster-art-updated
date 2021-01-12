@@ -2,13 +2,16 @@
 
 .contact {
   display: flex;
-  padding: 5vw;
-  height: 64vh;
+  height: 68vh;
+  width: 100%;
+  justify-content: center;
 }
 
-.contact-form {
+.contact .contact-form {
   width: 100%;
-  height: 100%;
+  height: 60vh;
+  margin: 4vw;
+  text-align: left;
 }
 
 .contact .contact-image {
@@ -21,10 +24,10 @@
 
 /* Contact page desktop styling */
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 75em) {
 
      .contact {
-       height: 83vh;
+       height: 84vh;
        width: 100%;
        display: flex;
        flex-direction: row;
@@ -34,17 +37,22 @@
 
     .contact-form {
       width: 50%;
-      height: 100%;
+      height: 80vh;
       padding: 2vw;
+      text-align: left;
     }
 
     .contact .contact-image {
-      display: contents;
-      height: 100%;
+      display: flex;
+      justify-content: center;
+      height: 80vh;
       width: 50%;
+      padding: 2vw;
     }
 
     .contact .contact-image img {
-      max-width: 45vw;
+      max-width: 46vw;
+      max-height: 60vh;
+      display: flex;
     }
 }

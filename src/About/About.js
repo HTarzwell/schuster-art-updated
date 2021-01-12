@@ -8,7 +8,7 @@ class About extends React.Component {
       <div className="about">
           <div className="about-fullsize">
           <div className="about-image">
-            <Image floated='right' src={require('./susie.png')}/>
+            <Image floated='right' size="big" src={require('./susie.png')}/>
           </div>
           <div className="about-text">
             <h1>ABOUT SUSIE</h1>

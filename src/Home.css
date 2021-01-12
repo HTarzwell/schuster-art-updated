@@ -29,42 +29,60 @@
   align-items: center;
 }
 
+.home .home-grid-mobile #home-mobile-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.home .home-grid-mobile .artist-card {
+  height: 22vh;
+  width: 46vw;
+}
+
 .home .home-grid-mobile .artist-card img {
-  max-height: 30vh;
-  max-width: 80vw;
+  height: 18vh;
+  width: 42vw;
+  opacity: 50%;
 }
 
-.home .artist-select {
-  height: 100%;
+.home .home-grid-mobile .artist-card .artist-card:hover {
+  transition: 0.3;
+  cursor: pointer;
+  box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
+  opacity: 80%;
 }
 
-.artistLinks {
-  color: #343434;
+.home .home-grid-mobile .artist-card .artist-card:active {
+  transform: scale(.8);
+  transition: transform .5s ease;
+  opacity: 100%;
 }
 
-.artistLinks:hover {
-  color: black;
+.home .home-grid-mobile .artist-card .artist-card-name {
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 75em) {
 
      .home {
        display: flex;
        flex-direction: column;
        align-items: center;
-       height: 85vh;
+       height: 84vh;
+       padding-bottom: 1vh;
+       padding-top: 1vh;
      }
 
      .home-hero {
-       height: 63vh;
+       height: 59vh;
        width: 100%;
        display: flex;
        justify-content: space-around;
-       border: 3px dotted orange;
      }
 
      .home-hero #homeHero {
-       max-height: 60vh;
+       max-height: 58vh;
        max-width: 120vw;
      }
 
@@ -90,10 +108,6 @@
 
      .home-hero .leftArrow .fa-icon {
        visibility: hidden;
-     }
-
-     .home-carousel {
-       overflow: hidden;
      }
 
      .home-carousel .leftArrow {
@@ -142,22 +156,20 @@
       opacity: 70%;
     }
 
-     .home-hero #homeHero {
-       height: 59vh;
-       max-width: 95%;
-     }
-
      .home .home-carousel {
-       height: 18vh;
+       height: 23vh;
        width: 100%;
        display: flex;
+       overflow: hidden;
      }
 
      .cssExperimental {
        width: 100%;
+       height: 100%;
        display: flex;
        flex-direction: row;
        justify-content: space-around;
+       align-items: center;
      }
 
      .homeCarousel-enter {
@@ -183,13 +195,13 @@
      }
 
      .artist-card {
-       height: 18vh;
-       width: 9vw;
+       height: 20vh;
+       width: 10vw;
      }
 
      .artist-card .artist-card-image {
-       height: 16vh;
-       width: 8vw;
+       height: 18vh;
+       width: 9vw;
        opacity: 50%;
      }
 
@@ -208,7 +220,7 @@
 
      .artist-card .artist-card-name {
        font-weight: 400;
-       font-size: 1.25em;
+       font-size: 1.5em;
      }
 
      .home .home-grid-mobile {

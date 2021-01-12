@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Artists.css'
 import Carousel from './Artist_Pages/carousel';
-import { Image, Modal, Button, Label } from 'semantic-ui-react';
+import { Image, Modal, Button, Label, Grid } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -108,7 +108,7 @@ const Artists = (artist) => {
             }
           </div>
         </div>
-        <div className="artist-showcase">
+        <div className="artist-showcase-fullsize">
           <div className="artist-statement">
             <h1>{selectedArtist.name}</h1>
             <ArtistBio />
@@ -116,6 +116,30 @@ const Artists = (artist) => {
           <div className="artist-photo">
             <img src={selectedArtist.artistPhoto} />
           </div>
+        </div>
+        <div className="artist-showcase-mobile">
+          <div className="artist-statement">
+            <h1>{selectedArtist.name}</h1>
+            <ArtistBio />
+          </div>
+          <div className="artist-photo">
+            <img src={selectedArtist.artistPhoto} />
+          </div>
+        </div>
+        <div className="artist-grid-mobile">
+          <Grid columns={2}>
+            {selectedArtist.works.map((work, index) => {
+              return (
+                <Grid.Column id="artist-mobile-grid">
+                  <Grid.Row>
+                    <div className="artist-card" key={index} onClick={() => changeHeroImage(index)}>
+                      <img className= "artist-card-image" src={work}/>
+                    </div>
+                  </Grid.Row>
+                </Grid.Column>
+              );
+            })}
+            </Grid>
         </div>
       </div>
     ) : null

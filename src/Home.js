@@ -59,55 +59,58 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-      <div className="home-carousel">
-        <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
-        {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
-          <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
-        }
-        </div>
-      <CSSTransitionGroup className="cssExperimental"
-          transitionName="homeCarousel"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-          >
-          {artistsImage.map((artist, index) =>
-            (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
-              <Link key={index} exact className="artistLinks" to={{
-                pathname: `/artists/${artist.name}`,
-                artistSelected: artist
-              }}>
-                <Carousel
-                  item={artist}
-                  index={index}
-                />
-              </Link>
-             : null
-          )}
-          </CSSTransitionGroup>
-      {(this.state.currentPositionRight < this.state.maxPositionRight) &&
-        <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
-          <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
-        </div>
-      }
-      </div>
         <div className="home-hero">
           <div className="leftArrow" href='#' onClick={() => this.changeHeroImage("left")}>
             { this.state.currentHeroPosition > this.state.maxHeroPositionLeft &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
             }
           </div>
+            <div className="image-wrapper">
               <img id="homeHero" src={this.state.currentHero.image}/>
+            </div>
           <div className="rightArrow" href='#' onClick={() => this.changeHeroImage("right")}>
           { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&
             <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
           }
           </div>
         </div>
+        <div className="home-carousel">
+          <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
+          {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
+            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+          }
+          </div>
+        <CSSTransitionGroup className="cssExperimental"
+            transitionName="homeCarousel"
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={300}
+            >
+            {artistsImage.map((artist, index) =>
+              (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
+                <Link key={index} exact className="artistLinks" to={{
+                  pathname: `/artists/${artist.name}`,
+                  artistSelected: artist
+                }}>
+                  <Carousel
+                    item={artist}
+                    index={index}
+                  />
+                </Link>
+               : null
+            )}
+            </CSSTransitionGroup>
+        {(this.state.currentPositionRight < this.state.maxPositionRight) &&
+          <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
+            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+          </div>
+        }
+        </div>
         <div className="home-grid-mobile">
+          <Grid columns={2}>
             {artistsImage.map((artist, index) => {
               return (
-                <Grid>
-                  <Grid.Column>
+                <Grid.Column id="home-mobile-grid">
+                  <Grid.Row>
                     <Link to={{
                       pathname: `/artists/${artist.name}`,
                       artistSelected: artist
@@ -117,10 +120,11 @@ class Home extends React.Component {
                       index={index}
                     />
                     </Link>
-                  </Grid.Column>
-                </Grid>
+                  </Grid.Row>
+                </Grid.Column>
               );
             })}
+            </Grid>
         </div>
       </div>
     )

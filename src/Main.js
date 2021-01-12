@@ -42,11 +42,9 @@ class Main extends Component {
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li>
-                <li><NavLink exact activeClassName="active" to="/favorites">
-                  My Gallery
-                  <Icon id="menu-heart" corner name="heart" color="red"/>
-                </NavLink></li>
-                <li>{this.state.artistShowcase}</li>
+                {this.state.artistShowcase &&
+                  <li><a>{this.state.artistShowcase}</a></li>
+                }
             </ul>
           </div>
           <div className="App-content">
