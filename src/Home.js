@@ -111,7 +111,7 @@ class Home extends React.Component {
               return (
                 <Grid.Column id="home-mobile-grid">
                   <Grid.Row>
-                    <Link to={{
+                    <Link className="artistLinks" to={{
                       pathname: `/artists/${artist.name}`,
                       artistSelected: artist
                     }}>

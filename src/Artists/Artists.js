@@ -18,6 +18,8 @@ const Artists = (artist) => {
   const [maxPositionRight, setMaxPositionRight] = useState(null)
   const [animation, setAnimation] = useState(null)
   const [open, setOpen] = useState(false)
+  const [openMobile, setOpenMobile] = useState(false)
+  const [modalImage, setModalImage] = useState(null)
 
   useEffect(() => {
     setArtist(artist.artist.location.artistSelected)
@@ -29,11 +31,11 @@ const Artists = (artist) => {
   }, [selectedArtist])
 
   useEffect(() => {
-    selectedArtist ? setHero(selectedArtist.works[0]) : setHero('')
+    selectedArtist ? setHero(selectedArtist.works[0].image) : setHero('')
   }, [selectedArtist])
 
   const changeHeroImage = index => {
-    setHero(selectedArtist.works[index])
+    setHero(selectedArtist.works[index].image)
   }
 
   const moveCarousel = direction => {
@@ -46,6 +48,11 @@ const Artists = (artist) => {
   } else {
       return;
     }
+  }
+
+  const openMobileModal = index => {
+    setModalImage(selectedArtist.works[index].image);
+    setOpenMobile(true);
   }
 
   return (
@@ -98,7 +105,7 @@ const Artists = (artist) => {
               {selectedArtist.works.map((work, index) =>
                 (index <= currentPositionRight && index >= currentPositionLeft) ?
                   <div className="artist-card" key={index} onClick={() => changeHeroImage(index)}>
-                    <img className= "artist-card-image" src={work}/>
+                    <img className= "artist-card-image" src={work.image}/>
                   </div> : null
               )}
           </CSSTransitionGroup>
@@ -120,10 +127,10 @@ const Artists = (artist) => {
         <div className="artist-showcase-mobile">
           <div className="artist-statement">
             <h1>{selectedArtist.name}</h1>
+            <div className="artist-photo">
+              <img src={selectedArtist.artistPhoto} />
+            </div>
             <ArtistBio />
-          </div>
-          <div className="artist-photo">
-            <img src={selectedArtist.artistPhoto} />
           </div>
         </div>
         <div className="artist-grid-mobile">
@@ -132,14 +139,33 @@ const Artists = (artist) => {
               return (
                 <Grid.Column id="artist-mobile-grid">
                   <Grid.Row>
-                    <div className="artist-card" key={index} onClick={() => changeHeroImage(index)}>
-                      <img className= "artist-card-image" src={work}/>
+                    <div className="artist-card" key={index} onClick={() => openMobileModal(index)}>
+                      <img className= "artist-card-image" src={work.image}/>
                     </div>
                   </Grid.Row>
                 </Grid.Column>
               );
             })}
             </Grid>
+            <Modal
+              basic
+              closeIcon
+              as={Image}
+              open={openMobile}
+              size="large"
+              onClose={() => setOpenMobile(false)}
+              onOpen={() => setOpenMobile(true)}
+              dimmer="blurring"
+            >
+              <Modal.Content>
+                <Label id="artistWorkDetails" size="large" ribbon as='a'>
+                  {selectedArtist.workPromo.info}
+                </Label>
+                <Image size='massive'
+                  src={modalImage}
+                />
+              </Modal.Content>
+            </Modal>
         </div>
       </div>
     ) : null

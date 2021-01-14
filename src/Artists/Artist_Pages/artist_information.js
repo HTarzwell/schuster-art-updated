@@ -4,25 +4,66 @@ export const artistsImage = [
       name: "Cathie Crawford",
       workPromo: {
         image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-        info: "lorem ipsum dolor etc.",
-        favorite: false
+        info: "lorem ipsum dolor etc."
       },
       link: '/Cathie_Crawford',
       works: [
-        require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Manzoku 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Mystic 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Nascent 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Noumena 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Samsara III 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Shimmer 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Spectrum 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Summer Daze 1440.jpg"),
-        require("../artist_details/Cathie_Crawford/Summer Soleil 1440.jpg"),
+        {
+          image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Manzoku 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Mystic 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Nascent 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Noumena 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Samsara III 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Shimmer 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Spectrum 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Summer Daze 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        },
+        {
+          image: require("../artist_details/Cathie_Crawford/Summer Soleil 1440.jpg"),
+          details: "lorem ipsum dolor etc."
+        }
       ],
       artistPhoto: require("../artist_details/Cathie_Crawford/Craig Stocks photo of me 1440.jpg"),
     },
@@ -48,13 +89,12 @@ export const artistsImage = [
       workPromo: {
         image: require("../artist_details/Susan_j_Schrader/Nighttimekeeperlady750png.png"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
       link: '/Susan_j_Schrader',
       works: [
         require("../artist_details/Susan_j_Schrader/Nighttimekeeperlady750png.png"),
         require("../artist_details/Susan_j_Schrader/Hope.png"),
-        require("../artist_details/Susan_j_Schrader/JazzyDance#1750png copy.png"),
+        require("../artist_details/Susan_j_Schrader/JazzyDance1750png.png"),
         require("../artist_details/Susan_j_Schrader/jazzydancewithyou750png.png"),
         require("../artist_details/Susan_j_Schrader/Lakeflower750png.png"),
         require("../artist_details/Susan_j_Schrader/snazzywalkabout.png"),
@@ -66,7 +106,6 @@ export const artistsImage = [
       workPromo: {
         image: require("../artist_details/Dorothy_Boyer/Market Day Arabia.jpg"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
       link: '/Dorothy_Boyer',
       works: [
@@ -101,7 +140,6 @@ export const artistsImage = [
       workPromo: {
         image: require("../artist_details/Toby_Penney/20200711_005425-02.jpeg"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
       link: 'Toby_Penney',
       works: [
@@ -118,46 +156,83 @@ export const artistsImage = [
             ],
       artistPhoto: require("../artist_details/Susan_j_Schrader/image0.jpeg"),
     },
-
     {
       name: "Joan Drescher",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Shimmer 1440.jpg"),
+        image: require("../artist_details/Joan_Drescher/Women Holding the Earth - LR.jpg"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
+      link: '/Joan_Drescher',
+      works: [
+        require("../artist_details/Joan_Drescher/_Purple Majesty -  22_ x 25_.jpg"),
+        require("../artist_details/Joan_Drescher/Awakening - 21_x 14 (1).jpg"),
+        require("../artist_details/Joan_Drescher/Believe in Peace - 29_ x 24_.jpg"),
+        require("../artist_details/Joan_Drescher/Butterfly Joy - 15 x 15.jpg"),
+        require("../artist_details/Joan_Drescher/Eye of the Beholder - 22_ x 25_.jpg"),
+        require("../artist_details/Joan_Drescher/Growing Inward - 26_ x 19_.jpg"),
+        require("../artist_details/Joan_Drescher/Hingham Roots - 29_ x 24.5_ .jpg"),
+        require("../artist_details/Joan_Drescher/Letting Go - 17_ x 17_.jpg"),
+        require("../artist_details/Joan_Drescher/Lighting the Path - 30_ x 35_.jpg"),
+        require("../artist_details/Joan_Drescher/Magnetic Magenta - 12-3-20.jpg"),
+        require("../artist_details/Joan_Drescher/Mariposa Tango - 38_ x 31_.jpg"),
+        require("../artist_details/Joan_Drescher/New Beginnings - 21_ x 14_.jpg"),
+        require("../artist_details/Joan_Drescher/One-sky-two-worlds.jpg"),
+        require("../artist_details/Joan_Drescher/Peace Messenger (1) - wh.jpg"),
+        require("../artist_details/Joan_Drescher/Purple Passion - LR.jpeg"),
+        require("../artist_details/Joan_Drescher/Quiet Heat - 20.5_ x 17.5_.jpg"),
+        require("../artist_details/Joan_Drescher/Sacred Swim -  17_ x  17_.jpg"),
+        require("../artist_details/Joan_Drescher/Sea Nest - 25_ x 24.5_.jpg"),
+        require("../artist_details/Joan_Drescher/Seeking the Path of Beauty - 26_ x 19_.jpg"),
+        require("../artist_details/Joan_Drescher/Sun Rising - 26_ x 21.5_.jpg"),
+        require("../artist_details/Joan_Drescher/Talking Flowers - 34_ x 27_.jpg"),
+        require("../artist_details/Joan_Drescher/Vibration Orange - 26_ x 21_.jpg"),
+        require("../artist_details/Joan_Drescher/Women Holding the Earth - LR.jpg"),
+      ],
+      artistPhoto: require("../artist_details/Joan_Drescher/Joan Drescher Photo.JPG"),
     },
     {
       name: "Genarro Barci",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
+        image: require("../artist_details/Gennaro_Barci/Quiet.jpg"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
+      link: '/Gennaro_Barci',
+      works: [
+        require("../artist_details/Gennaro_Barci/A Fire Inside.jpg"),
+        require("../artist_details/Gennaro_Barci/acting energies.jpg"),
+        require("../artist_details/Gennaro_Barci/boogie-woogie6.jpg"),
+        require("../artist_details/Gennaro_Barci/Charon.jpg"),
+        require("../artist_details/Gennaro_Barci/coercizione1.jpg"),
+        require("../artist_details/Gennaro_Barci/divenirenew.jpg"),
+        require("../artist_details/Gennaro_Barci/Dont Make Me Fall If You Cant Catch Me.jpg"),
+        require("../artist_details/Gennaro_Barci/Entanglement.jpg"),
+        require("../artist_details/Gennaro_Barci/Flight of the Red Heron.jpg"),
+        require("../artist_details/Gennaro_Barci/il-tuo-profilo.jpg"),
+        require("../artist_details/Gennaro_Barci/in-nomine-domini-4.jpg"),
+        require("../artist_details/Gennaro_Barci/la-sublimazione-di-un-rombo.jpg"),
+        require("../artist_details/Gennaro_Barci/Me Vs Me.jpg"),
+        require("../artist_details/Gennaro_Barci/nuvola.jpg"),
+        require("../artist_details/Gennaro_Barci/nuvole2.jpg"),
+        require("../artist_details/Gennaro_Barci/Quiet.jpg"),
+        require("../artist_details/Gennaro_Barci/un-sentimento-inatteso.jpg"),
+        require("../artist_details/Gennaro_Barci/Up To You.jpg"),
+      ],
+      artistPhoto: require("../artist_details/Gennaro_Barci/artist_img.jpg"),
     },
     {
-      name: "Trudie Canwood",
+      name: "Angela M Franco",
       workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Spectrum 1440.jpg"),
+        image: require("../artist_details/Angela_M_Franco/IMG_20210105_143025_155.jpg"),
         info: "lorem ipsum dolor etc.",
-        favorite: false
       },
-    },
-    {
-      name: "Lisa DeLong",
-      workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Summer Daze 1440.jpg"),
-        info: "lorem ipsum dolor etc.",
-        favorite: false
-      },
-    },
-    {
-      name: "Angela Difranco",
-      workPromo: {
-        image: require("../artist_details/Cathie_Crawford/Summer Soleil 1440.jpg"),
-        info: "lorem ipsum dolor etc.",
-        favorite: false
-      },
+      link: '/Angela_M_Franco',
+      works: [
+        require("../artist_details/Angela_M_Franco/20210103_211007.jpg"),
+        require("../artist_details/Angela_M_Franco/20210109_115037.jpg"),
+        require("../artist_details/Angela_M_Franco/20210111_151515.jpg"),
+        require("../artist_details/Angela_M_Franco/IMG_20210105_143025_155.jpg"),
+      ],
+      artistPhoto: require("../artist_details/Angela_M_Franco/franco_photo.jpg"),
     },
   ]
 

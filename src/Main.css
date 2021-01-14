@@ -51,9 +51,9 @@
 
 .App-header ul {
   list-style-type: none;
+  padding-left: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 5vh;
   font-size: 1.25em;
@@ -62,13 +62,13 @@
 .App-header ul a {
   text-decoration: none;
   color: #343434;
-  padding: 1vw;
 }
 
 .App-header ul a:hover {
   background-color: #343434;
   color: white;
   transition: 0.3;
+  padding: 1vw;
   box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
 }
 

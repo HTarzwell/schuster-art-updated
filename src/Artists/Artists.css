@@ -35,15 +35,18 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vh;
 }
 
 .artist-select .artist-page .artist-showcase-mobile .artist-photo {
-  width: 35%;
+  width: 100%;
 }
 
 .artist-select .artist-page .artist-showcase-mobile .artist-photo img {
-  max-width: 30vw;
-  max-height: 45vh;
+  max-width: 85vw;
+  max-height: 100vh;
 }
 
 .artist-select .artist-page .artist-showcase-mobile .artist-statement {
@@ -56,6 +59,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .artist-select .artist-grid-mobile #artist-mobile-grid {
@@ -68,23 +73,16 @@
   width: 46vw;
 }
 
+.artist-select .artist-grid-mobile .artist-card:hover,
+.artist-select .artist-grid-mobile .artist-card:focus,
+.artist-select .artist-grid-mobile .artist-card:active {
+  cursor: pointer;
+}
+
 .artist-select .artist-grid-mobile .artist-card img {
   height: 18vh;
   width: 42vw;
-  opacity: 50%;
-}
-
-.artist-select .artist-grid-mobile .artist-card .artist-card:hover {
-  transition: 0.3;
-  cursor: pointer;
-  box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
-  opacity: 80%;
-}
-
-.artist-select .artist-grid-mobile .artist-card .artist-card:active {
-  transform: scale(.8);
-  transition: transform .5s ease;
-  opacity: 100%;
+  opacity: 95%;
 }
 
 .artist-select .artist-grid-mobile .artist-card .artist-card-name {
@@ -188,7 +186,6 @@
        height: 24vh;
        width: 100%;
        display: flex;
-          border: 3px dotted orange;
      }
 
      .cssExperimental {
@@ -234,7 +231,6 @@
        display: flex;
        justify-content: center;
        padding-top: 2vh;
-          border: 3px dotted blue;
      }
 
      .artist-select .artist-page .artist-showcase-fullsize .artist-photo {
