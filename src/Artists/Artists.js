@@ -12,6 +12,7 @@ const Artists = (artist) => {
 
   const [selectedArtist, setArtist] = useState();
   const [currentHero, setHero] = useState(null);
+  const [currentHeroInfo, setHeroInfo] = useState(null);
   const [currentPositionLeft, setCurrentPositionLeft] = useState(0);
   const [currentPositionRight, setCurrentPositionRight] = useState(8);
   const maxPositionLeft = 0;
@@ -34,8 +35,13 @@ const Artists = (artist) => {
     selectedArtist ? setHero(selectedArtist.works[0].image) : setHero('')
   }, [selectedArtist])
 
+  useEffect(() => {
+    selectedArtist ? setHeroInfo(selectedArtist.works[0].details) : setHeroInfo('')
+  }, [selectedArtist])
+
   const changeHeroImage = index => {
     setHero(selectedArtist.works[index].image)
+    setHeroInfo(selectedArtist.works[index].details)
   }
 
   const moveCarousel = direction => {
@@ -78,7 +84,7 @@ const Artists = (artist) => {
           >
             <Modal.Content>
               <Label id="artistWorkDetails" size="massive" ribbon as='a'>
-                {selectedArtist.workPromo.info}
+                {currentHeroInfo}
               </Label>
               <Image size='massive'
                       src={currentHero}

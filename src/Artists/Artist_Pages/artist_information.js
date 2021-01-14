@@ -4,65 +4,65 @@ export const artistsImage = [
       name: "Cathie Crawford",
       workPromo: {
         image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-        info: "lorem ipsum dolor etc."
+        info: "Anima Mundi, (soul of the world), reduction woodcut"
       },
       link: '/Cathie_Crawford',
       works: [
         {
           image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Anima Mundi, (soul of the world), reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Breaking_1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Breaking, color reduction woodcut monoprint,"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Inception II 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Inception II, color reduction woodcut monoprint"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Luna Sea 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Luna Sea, color reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Manzoku 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Manzoku, Mokulito (lithography on wood)"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Mystic 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Mystic, color reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Nascent 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Nascent, Mokulito (lithography on wood)"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Noumena 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Noumena, color reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Samsara III 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: " Samsara III, color reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Serendipity 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Serendipity, reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Shimmer 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Shimmer, reduction woodcut, bleed print"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Spectrum 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Spectrum, color reduction woodcut"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Summer Daze 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Summer Daze, reduction woodcut monoprint"
         },
         {
           image: require("../artist_details/Cathie_Crawford/Summer Soleil 1440.jpg"),
-          details: "lorem ipsum dolor etc."
+          details: "Summer Soleil, reduction woodcut"
         }
       ],
       artistPhoto: require("../artist_details/Cathie_Crawford/Craig Stocks photo of me 1440.jpg"),
