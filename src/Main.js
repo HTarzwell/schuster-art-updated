@@ -12,19 +12,52 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { Icon, Modal, Button, Form, Input } from "semantic-ui-react";
+import { Icon, Modal, Button, Form, Input, Transition, Message } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
+import emailjs from 'emailjs-com';
 
 class Main extends Component {
+
+  serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  userId = process.env.REACT_APP_EMAILJS_USER_ID;
 
   state = {
     artistShowcase: null,
     footerModalOpen: false,
+    subscriberEmail: null,
+    successVisible: false,
+    errorVisible: false,
   }
 
   toggleSubscriberModal = bool => {
     this.setState({
       footerModalOpen: bool
+    })
+  }
+
+  handleChangeEmail = event => {
+    this.setState({
+      subscriberEmail: event.target.value
+    })
+  }
+
+  handleSubmit (event) {
+    emailjs.send(this.serviceId, this.templateId, {
+      from_name: "subscriber",
+      to_name: "Schuster Art",
+      message: `please subscribe me to your newsletter: ${this.state.subscriberEmail}`,
+      reply_to: this.state.subscriberEmail,
+    }, this.userId).then(res => {
+      this.setState({
+        subscriberEmail: null,
+        successVisible: true
+      })
+    })
+    .catch(err => {
+      this.setState({
+        errorVisible: true
+      })
     })
   }
 
@@ -59,26 +92,42 @@ class Main extends Component {
             <div className="App-footer">
               <div className="footer-subscribe">
                 <div className="subscription-label">
-                  <p>Subscribe to our newsletter</p>
+                  <p>Subscribe to our newsletter: </p>
                 </div>
                 <div className="ui action">
                   <Modal
+                    basic
                     closeIcon
                     onOpen={() => this.toggleSubscriberModal(true)}
                     onClose={() => this.toggleSubscriberModal(false)}
                     open={this.state.footerModalOpen}
-                    trigger={<button className="ui button">SIGN UP</button>}
+                    trigger={<button className="subscribe-button">SUBSCRIBE</button>}
                     >
                     <Modal.Header>Become a subscriber!</Modal.Header>
                     <Modal.Content>
-                    <Form id="contact-form-semantic">
+                    <Form inverted id="contact-form-semantic" onSubmit={this.handleSubmit.bind(this)}>
                       <Form.Field
-                        id='form-input-control-email'
+                        id='form-input-control-error-email'
                         control={Input}
                         label='Email'
+                        required={true}
+                        value={this.state.subscriberEmail}
+                        onChange={this.handleChangeEmail.bind(this)}
                       />
-                      <Button size="large" type='submit'>Submit</Button>
+                      <Button size="large" type='submit' value="Send">Submit</Button>
                     </Form>
+                    <Transition visible={this.state.successVisible} animation='scale' duration={500}>
+                      <Message success>
+                        <Message.Header>Success!  Your message is on its way.</Message.Header>
+                        <Message.Content>Thank you for reaching out to us.</Message.Content>
+                      </Message>
+                    </Transition>
+                    <Transition visible={this.state.errorVisible} animation='scale' duration={500}>
+                      <Message negative>
+                        <Message.Header>Oops, something went wrong</Message.Header>
+                        <Message.Content>Please try again!  It's not you, it's us.</Message.Content>
+                      </Message>
+                    </Transition>
                     </Modal.Content>
                   </Modal>
                 </div>
@@ -90,10 +139,10 @@ class Main extends Component {
                 <a href="mailto: info@schusterartconsultancy.com">info@schusterartconsultancy.com</a>
               </div>
               <div className="footer-social">
-                <a href="https://www.facebook.com/pages/category/Local-Business/Schuster-Art-Consultancy-328435110650312/">
+                <a href="https://www.facebook.com/pages/category/Local-Business/Schuster-Art-Consultancy-328435110650312/" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon className="fa-icon" icon={faFacebook} size="2x"/>
                 </a>
-                <a href="schuster_art_consultancy">
+                <a href="schuster_art_consultancy" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon className="fa-icon" icon={faInstagram} size="2x"/>
                 </a>
               </div>

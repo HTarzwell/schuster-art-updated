@@ -46,6 +46,7 @@
   height: 18vh;
   width: 42vw;
   opacity: 95%;
+  box-shadow:0px 0px 7px #343434;
 }
 
 .home .home-grid-mobile .artist-card .artist-card-name {
@@ -75,6 +76,12 @@
        max-height: 58vh;
        max-width: 120vw;
      }
+
+      .home-hero #homeHero:hover {
+        transform: scale(.95);
+        transition: transform .5s ease;
+        opacity: 90%;
+      }
 
      .home-hero .leftArrow {
        height: 100%;

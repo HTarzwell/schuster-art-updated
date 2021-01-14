@@ -73,21 +73,29 @@
   width: 46vw;
 }
 
-.artist-select .artist-grid-mobile .artist-card:hover,
-.artist-select .artist-grid-mobile .artist-card:focus,
-.artist-select .artist-grid-mobile .artist-card:active {
-  cursor: pointer;
-}
-
 .artist-select .artist-grid-mobile .artist-card img {
   height: 18vh;
   width: 42vw;
   opacity: 95%;
+  box-shadow:0px 0px 7px #343434;
 }
 
 .artist-select .artist-grid-mobile .artist-card .artist-card-name {
   font-weight: 400;
   font-size: 1.2em;
+}
+
+#detail-title {
+  font-style: italic;
+  font-size: 1.75em;
+}
+
+#detail-materials {
+  font-size: 1.25em;
+}
+
+.artist-select .artist-hero #artistWorkDetails {
+  background-color: #343434;
 }
 
 @media screen and (min-width: 75em) {
@@ -110,6 +118,13 @@
      .artist-select .artist-hero .image-wrapper {
        height: 73vh;
        max-width: 70%;
+     }
+
+     .artist-select .artist-hero #artistHero:hover {
+       transform: scale(.95);
+       transition: transform .3s ease;
+       box-shadow: 0px 0px 7px #343434;
+       cursor: pointer;
      }
 
      .artist-hero .leftArrow {
@@ -248,9 +263,5 @@
      .artist-select .artist-page .artist-showcase-fullsize .artist-photo img {
        max-width: 30vw;
        max-height: 45vh;
-     }
-
-     .artist-select .artist-hero .image-wrapper #artistWorkDetails {
-       color: #343434;
      }
 }

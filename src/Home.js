@@ -13,7 +13,7 @@ class Home extends React.Component {
 
     state = {
       currentHero: artistsImage[0].workPromo,
-      artist: null,
+      artist: artistsImage[0],
       currentPositionLeft: 0,
       currentPositionRight: 8,
       maxPositionLeft: 0,
@@ -29,11 +29,13 @@ class Home extends React.Component {
       this.setState({
         currentHeroPosition: this.state.currentHeroPosition -= 1,
         currentHero: artistsImage[this.state.currentHeroPosition].workPromo,
+        artist: artistsImage[this.state.currentHeroPosition]
       })
     } else if (direction === "right") {
       this.setState({
         currentHeroPosition: this.state.currentHeroPosition +=1,
         currentHero: artistsImage[this.state.currentHeroPosition].workPromo,
+        artist: artistsImage[this.state.currentHeroPosition]
       })
     } else {
       return;
@@ -66,7 +68,12 @@ class Home extends React.Component {
             }
           </div>
             <div className="image-wrapper">
-              <img id="homeHero" src={this.state.currentHero.image}/>
+              <Link key={this.state.currentHeroPosition} exact className="artistLinks" to={{
+                pathname: `/artists/${this.state.artist.name}`,
+                artistSelected: this.state.artist
+              }}>
+                <img id="homeHero" src={this.state.currentHero.image}/>
+              </Link>
             </div>
           <div className="rightArrow" href='#' onClick={() => this.changeHeroImage("right")}>
           { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&

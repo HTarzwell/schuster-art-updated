@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import './Artists.css'
 import Carousel from './Artist_Pages/carousel';
-import { Image, Modal, Button, Label, Grid } from 'semantic-ui-react';
+import { Image, Modal, Button, Label, Grid, Icon } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import ArtistBio from './Artist_Pages/artist_bio';
-import { CSSTransitionGroup } from 'react-transition-group'
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const Artists = (artist) => {
 
@@ -66,16 +66,9 @@ const Artists = (artist) => {
       { selectedArtist ?
       (<div className="artist-page">
         <div className="artist-hero">
-          <div className="leftArrow" href='#'>
-          { currentPositionLeft > maxPositionLeft &&
-            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
-          }
-          </div>
           <Image id="artistHero" src={currentHero} onClick={() => setOpen(true)}/>
           <Modal
             basic
-            closeIcon
-            as={Image}
             open={open}
             size="large"
             onClose={() => setOpen(false)}
@@ -83,19 +76,33 @@ const Artists = (artist) => {
             dimmer="blurring"
           >
             <Modal.Content>
-              <Label id="artistWorkDetails" size="massive" ribbon as='a'>
-                {currentHeroInfo}
-              </Label>
-              <Image size='massive'
-                      src={currentHero}
-                       />
+            <Label color="black" id="artistWorkDetails" size="large" ribbon>
+              <p id="detail-title">{currentHeroInfo.title}</p>
+              <p id="detail-materials">{currentHeroInfo.materials}</p>
+              <p id="detail-size">{currentHeroInfo.size}</p>
+            </Label>
+              <Image size="massive"
+                src={currentHero}
+              />
             </Modal.Content>
+            <Modal.Actions>
+              <Button.Group size="large">
+                <Button as="a" circular color="red"
+                onClick={() => {
+                  window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+                }}
+                >
+                  <Icon name="heart" />
+                  like
+                </Button>
+                <Button.Or />
+                <Button circular onClick={() => setOpen(false)}>
+                  <Icon name="close"/>
+                  close
+                </Button>
+              </Button.Group>
+            </Modal.Actions>
           </Modal>
-          <div className="rightArrow" href='#'>
-          { currentPositionRight < maxPositionRight &&
-            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
-          }
-          </div>
         </div>
         <div className="artist-carousel">
           <div className="leftArrow" href='#'>
@@ -155,7 +162,6 @@ const Artists = (artist) => {
             </Grid>
             <Modal
               basic
-              closeIcon
               as={Image}
               open={openMobile}
               size="large"
@@ -171,6 +177,23 @@ const Artists = (artist) => {
                   src={modalImage}
                 />
               </Modal.Content>
+              <Modal.Actions>
+                <Button.Group size="large">
+                  <Button as="a" circular color="red"
+                  onClick={() => {
+                    window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo}`
+                  }}
+                  >
+                    <Icon name="heart" />
+                    like
+                  </Button>
+                  <Button.Or />
+                  <Button circular onClick={() => setOpenMobile(false)}>
+                    <Icon name="close"/>
+                    close
+                  </Button>
+                </Button.Group>
+              </Modal.Actions>
             </Modal>
         </div>
       </div>
