@@ -75,6 +75,19 @@ const Artists = (artist) => {
             onOpen={() => setOpen(true)}
             dimmer="blurring"
           >
+          <Modal.Actions>
+            <Button.Group size="large">
+              <Button as="a" circular
+              onClick={() => {
+                window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+              }}
+              icon="heart"
+              >
+              </Button>
+              <Button circular onClick={() => setOpen(false)} icon="close">
+              </Button>
+            </Button.Group>
+          </Modal.Actions>
             <Modal.Content>
             <Label color="black" id="artistWorkDetails" size="large" ribbon>
               <p id="detail-title">{currentHeroInfo.title}</p>
@@ -85,23 +98,6 @@ const Artists = (artist) => {
                 src={currentHero}
               />
             </Modal.Content>
-            <Modal.Actions>
-              <Button.Group size="large">
-                <Button as="a" circular color="red"
-                onClick={() => {
-                  window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
-                }}
-                >
-                  <Icon name="heart" />
-                  like
-                </Button>
-                <Button.Or />
-                <Button circular onClick={() => setOpen(false)}>
-                  <Icon name="close"/>
-                  close
-                </Button>
-              </Button.Group>
-            </Modal.Actions>
           </Modal>
         </div>
         <div className="artist-carousel">

@@ -27,25 +27,24 @@
 @media screen and (min-width: 75em) {
 
      .contact {
-       height: 84vh;
-       width: 100%;
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       padding: 5vh;
+      height: 84vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5vh;
     }
 
     .contact-form {
       width: 50%;
-      height: 80vh;
-      padding: 2vw;
+      height: 100%;
       text-align: left;
     }
 
     .contact .contact-image {
       display: flex;
       justify-content: center;
-      height: 80vh;
+      height: 100%;
       width: 50%;
       padding: 2vw;
     }

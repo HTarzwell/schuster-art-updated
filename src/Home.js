@@ -106,11 +106,11 @@ class Home extends React.Component {
                : null
             )}
             </CSSTransitionGroup>
-        {(this.state.currentPositionRight < this.state.maxPositionRight) &&
           <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
-            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+            {(this.state.currentPositionRight < this.state.maxPositionRight) &
+              <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+            }
           </div>
-        }
         </div>
         <div className="home-grid-mobile">
           <Grid columns={2}>
