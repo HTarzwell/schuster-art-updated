@@ -82,9 +82,9 @@ class Home extends React.Component {
           </div>
         </div>
         <div className="home-carousel">
-          <div className="leftArrow" href='#' onClick={() => this.moveCarousel("left")}>
+          <div className="leftArrow" href='#'>
           {(this.state.currentPositionLeft > this.state.maxPositionLeft) &&
-            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+            <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x"  onClick={() => this.moveCarousel("left")}/>
           }
           </div>
         <CSSTransitionGroup className="cssExperimental"
@@ -106,9 +106,9 @@ class Home extends React.Component {
                : null
             )}
             </CSSTransitionGroup>
-          <div className="rightArrow" href='#' onClick={() => this.moveCarousel("right")}>
-            {(this.state.currentPositionRight < this.state.maxPositionRight) &
-              <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+          <div className="rightArrow">
+            {(this.state.currentPositionRight < this.state.maxPositionRight) &&
+              <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x"  onClick={() => this.moveCarousel("right")}/>
             }
           </div>
         </div>

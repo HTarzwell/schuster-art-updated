@@ -14,13 +14,14 @@ const Artists = (artist) => {
   const [currentHero, setHero] = useState(null);
   const [currentHeroInfo, setHeroInfo] = useState(null);
   const [currentPositionLeft, setCurrentPositionLeft] = useState(0);
-  const [currentPositionRight, setCurrentPositionRight] = useState(8);
+  const [currentPositionRight, setCurrentPositionRight] = useState(7);
   const maxPositionLeft = 0;
   const [maxPositionRight, setMaxPositionRight] = useState(null)
   const [animation, setAnimation] = useState(null)
   const [open, setOpen] = useState(false)
   const [openMobile, setOpenMobile] = useState(false)
   const [modalImage, setModalImage] = useState(null)
+  const [gridInfo, setGridInfo] = useState(null)
 
   useEffect(() => {
     setArtist(artist.artist.location.artistSelected)
@@ -58,6 +59,7 @@ const Artists = (artist) => {
 
   const openMobileModal = index => {
     setModalImage(selectedArtist.works[index].image);
+    setGridInfo(selectedArtist.works[index].details);
     setOpenMobile(true);
   }
 
@@ -93,6 +95,14 @@ const Artists = (artist) => {
               <p id="detail-title">{currentHeroInfo.title}</p>
               <p id="detail-materials">{currentHeroInfo.materials}</p>
               <p id="detail-size">{currentHeroInfo.size}</p>
+              { currentHeroInfo.isForSale ?
+              <Label as={Button} size="large" color='green' horizontal
+              onClick={() => {
+                window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+              }}
+              >For sale</Label> :
+              <Label color='grey' horizontal>Not for sale</Label>
+              }
             </Label>
               <Image size="massive"
                 src={currentHero}
@@ -101,7 +111,7 @@ const Artists = (artist) => {
           </Modal>
         </div>
         <div className="artist-carousel">
-          <div className="leftArrow" href='#'>
+          <div className="leftArrow">
             { currentPositionLeft > maxPositionLeft &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" onClick={() => moveCarousel("left")} />
             }
@@ -118,7 +128,7 @@ const Artists = (artist) => {
                   </div> : null
               )}
           </CSSTransitionGroup>
-          <div className="rightArrow" href='#'>
+          <div className="rightArrow">
             { currentPositionRight < maxPositionRight &&
               <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" onClick={() => moveCarousel("right")}/>
             }
@@ -127,7 +137,7 @@ const Artists = (artist) => {
         <div className="artist-showcase-fullsize">
           <div className="artist-statement">
             <h1>{selectedArtist.name}</h1>
-            <ArtistBio />
+            <ArtistBio bioInfo={selectedArtist.bio}/>
           </div>
           <div className="artist-photo">
             <img src={selectedArtist.artistPhoto} />
@@ -139,7 +149,7 @@ const Artists = (artist) => {
             <div className="artist-photo">
               <img src={selectedArtist.artistPhoto} />
             </div>
-            <ArtistBio />
+            <ArtistBio bioInfo={selectedArtist.bio} />
           </div>
         </div>
         <div className="artist-grid-mobile">
@@ -165,29 +175,35 @@ const Artists = (artist) => {
               onOpen={() => setOpenMobile(true)}
               dimmer="blurring"
             >
+            {gridInfo &&
               <Modal.Content>
-                <Label id="artistWorkDetails" size="large" ribbon as='a'>
-                  {selectedArtist.workPromo.info}
+                <Label id="artistWorkDetails" size="large" color="black" ribbon as='a'>
+                  <p id="detail-title">{gridInfo.title}</p>
+                  <p id="detail-materials">{gridInfo.materials}</p>
+                  <p id="detail-size">{gridInfo.size}</p>
+                  { gridInfo.isForSale ?
+                  <Label as={Button} size="large" color='green' horizontal
+                  onClick={() => {
+                    window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+                  }}
+                  >For sale</Label> :
+                  <Label color='grey' horizontal>Not for sale</Label>
+                  }
                 </Label>
                 <Image size='massive'
                   src={modalImage}
                 />
               </Modal.Content>
+            }
               <Modal.Actions>
                 <Button.Group size="large">
-                  <Button as="a" circular color="red"
+                  <Button as="a" circular
                   onClick={() => {
                     window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo}`
                   }}
-                  >
-                    <Icon name="heart" />
-                    like
-                  </Button>
-                  <Button.Or />
-                  <Button circular onClick={() => setOpenMobile(false)}>
-                    <Icon name="close"/>
-                    close
-                  </Button>
+                  icon="heart"
+                  />
+                  <Button circular onClick={() => setOpenMobile(false)} icon="close" />
                 </Button.Group>
               </Modal.Actions>
             </Modal>
