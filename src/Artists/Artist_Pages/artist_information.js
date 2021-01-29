@@ -4,7 +4,11 @@ export const artistsImage = [
       name: "Raeda Ashour",
       workPromo: {
         image: require("../artist_details/Raeda_Ashour/RaedaAshour 72-1.jpg"),
-        info: "lorem ipsum dolor"
+        heroDetails: {
+          name: "Raeda Ashour",
+          title: "Untitled 1",
+          materials: "Manual Embossing, water colors",
+        }
       },
       link: '/Raeda_Ashour',
       works: [
@@ -79,7 +83,11 @@ export const artistsImage = [
       name: "Genarro Barci",
       workPromo: {
         image: require("../artist_details/Gennaro_Barci/Quiet.jpg"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Genarro Barci",
+          title: "Quiet",
+          materials: "Enamels on Methacrylate",
+        }
       },
       link: '/Gennaro_Barci',
       works: [
@@ -253,7 +261,10 @@ export const artistsImage = [
       name: "Dorothy F. Boyer",
       workPromo: {
         image: require("../artist_details/Dorothy_Boyer/Market Day Arabia.jpg"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Dorothy F. Boyer",
+          title: "Market Day Arabia",
+        }
       },
       link: '/Dorothy_Boyer',
       works: [
@@ -448,7 +459,11 @@ export const artistsImage = [
       name: "Cathie Crawford",
       workPromo: {
         image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
-        info: "Anima Mundi, (soul of the world), reduction woodcut"
+        heroDetails: {
+          name: "Cathie Crawford",
+          title: "Anima Mundi, (soul of the world)",
+          materials: "reduction woodcut",
+        }
       },
       link: '/Cathie_Crawford',
       works: [
@@ -586,7 +601,10 @@ export const artistsImage = [
       name: "Joan Drescher",
       workPromo: {
         image: require("../artist_details/Joan_Drescher/Women Holding the Earth - LR.jpg"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Joan Drescher",
+          title: "Women Holding the Earth",
+        }
       },
       link: '/Joan_Drescher',
       works: [
@@ -782,7 +800,11 @@ export const artistsImage = [
       name: "Angela M Franco",
       workPromo: {
         image: require("../artist_details/Angela_M_Franco/IMG_20210105_143025_155.jpg"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Angela M Franco",
+          title: "Snow over nude shoulders",
+          materials: "India ink, watercolors and fountain pen over Somerset paper",
+        }
       },
       link: '/Angela_M_Franco',
       works: [
@@ -826,7 +848,11 @@ export const artistsImage = [
       name: "Toby Penney",
       workPromo: {
         image: require("../artist_details/Toby_Penney/20200711_005425-02.jpeg"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Toby Penney",
+          title: "Connecting The Past & Future",
+          materials: "Mixed media with reclaimed fabric and fibers on canvas",
+        }
       },
       link: 'Toby_Penney',
       works: [
@@ -919,7 +945,11 @@ export const artistsImage = [
       name: "Susan j Schrader",
       workPromo: {
         image: require("../artist_details/Susan_j_Schrader/Nighttimekeeperlady750png.png"),
-        info: "lorem ipsum dolor etc.",
+        heroDetails: {
+          name: "Susan j Schrader",
+          title: "Nighttime Keeper Lady - Lantern",
+          materials: "Hand rolled aluminum/wire/paper on board",
+        }
       },
       link: '/Susan_j_Schrader',
       works: [

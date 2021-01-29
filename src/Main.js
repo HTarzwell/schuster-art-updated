@@ -61,6 +61,13 @@ class Main extends Component {
     })
   }
 
+  setArtistName = name => {
+    this.setState({
+      artistShowcase: name
+    })
+    console.log(this.state.artistShowcase, 'is artistShowcase')
+  }
+
   render() {
     return (
         <div className="App">
@@ -75,16 +82,13 @@ class Main extends Component {
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/about">About</NavLink></li>
                 <li><NavLink exact activeClassName="active" to="/contact">Contact</NavLink></li>
-                {this.state.artistShowcase &&
-                  <li><a>{this.state.artistShowcase}</a></li>
-                }
             </ul>
           </div>
           <div className="App-content">
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
-            <Route path="/artists/:artists" render={(artistSelected) => (
-              <Artists artist={artistSelected}/>
+            <Route path="/artists/:artists" render={(artistSelected, headerName) => (
+              <Artists onLoad={() => this.setArtistName(headerName)} artist={artistSelected}/>
             )} />
             <Route path="/contact" component={Contact}/>
             <Route path="/favorites" component={Favorites}/>

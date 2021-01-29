@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css'
-import { Card, Image, Transition, Grid } from 'semantic-ui-react';
+import { Card, Image, Transition, Grid, Label } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
@@ -62,9 +62,9 @@ class Home extends React.Component {
     return (
       <div className="home">
         <div className="home-hero">
-          <div className="leftArrow" href='#' onClick={() => this.changeHeroImage("left")}>
+          <div className="leftArrow" href='#'>
             { this.state.currentHeroPosition > this.state.maxHeroPositionLeft &&
-              <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" />
+              <FontAwesomeIcon className="fa-icon" icon={faChevronLeft} size="3x" onClick={() => this.changeHeroImage("left")} />
             }
           </div>
             <div className="image-wrapper">
@@ -72,12 +72,17 @@ class Home extends React.Component {
                 pathname: `/artists/${this.state.artist.name}`,
                 artistSelected: this.state.artist
               }}>
+                <div className="heroLabel">
+                  <p id="hero-artist">{this.state.currentHero.heroDetails.name}</p>
+                  <p id="hero-title">{this.state.currentHero.heroDetails.title}</p>
+                  <p id="hero-materials">{this.state.currentHero.heroDetails.materials}</p>
+                </div>
                 <img id="homeHero" src={this.state.currentHero.image}/>
               </Link>
             </div>
-          <div className="rightArrow" href='#' onClick={() => this.changeHeroImage("right")}>
+          <div className="rightArrow" href='#'>
           { this.state.currentHeroPosition < this.state.maxHeroPositionRight &&
-            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" />
+            <FontAwesomeIcon className="fa-icon" icon={faChevronRight} size="3x" onClick={() => this.changeHeroImage("right")} />
           }
           </div>
         </div>
@@ -96,7 +101,8 @@ class Home extends React.Component {
               (index < this.state.currentPositionRight && index >= this.state.currentPositionLeft) ?
                 <Link key={index} exact className="artistLinks" to={{
                   pathname: `/artists/${artist.name}`,
-                  artistSelected: artist
+                  artistSelected: artist,
+                  headerName: artist.name
                 }}>
                   <Carousel
                     item={artist}

@@ -68,7 +68,20 @@ const Artists = (artist) => {
       { selectedArtist ?
       (<div className="artist-page">
         <div className="artist-hero">
-          <Image id="artistHero" src={currentHero} onClick={() => setOpen(true)}/>
+          <div className="artist-showcase-fullsize">
+            <div className="artist-statement">
+              <div className="artist-photo">
+                <img src={selectedArtist.artistPhoto} />
+              </div>
+              <div className="artist-text">
+                <h1>{selectedArtist.name}</h1>
+                <p>{selectedArtist.bio}</p>
+              </div>
+            </div>
+          </div>
+          <div className="artist-hero-image">
+            <img id="artistHero" src={currentHero} onClick={() => setOpen(true)}/>
+          </div>
           <Modal
             basic
             open={open}
@@ -91,19 +104,33 @@ const Artists = (artist) => {
             </Button.Group>
           </Modal.Actions>
             <Modal.Content>
-            <Label color="black" id="artistWorkDetails" size="large" ribbon>
-              <p id="detail-title">{currentHeroInfo.title}</p>
-              <p id="detail-materials">{currentHeroInfo.materials}</p>
-              <p id="detail-size">{currentHeroInfo.size}</p>
-              { currentHeroInfo.isForSale ?
-              <Label as={Button} size="large" color='green' horizontal
-              onClick={() => {
-                window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
-              }}
-              >For sale</Label> :
-              <Label color='grey' horizontal>Not for sale</Label>
-              }
-            </Label>
+              <Label color="black" id="artistWorkDetails" size="large" ribbon>
+                <p id="detail-title">{currentHeroInfo.title}</p>
+                <p id="detail-materials">{currentHeroInfo.materials}</p>
+                <p id="detail-size">{currentHeroInfo.size}</p>
+                { currentHeroInfo.isForSale ?
+                <Label as={Button} size="large" color='green' horizontal
+                onClick={() => {
+                  window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+                }}
+                >For sale</Label> :
+                <Label color='grey' horizontal>Not for sale</Label>
+                }
+              </Label>
+              <div className="artist-label">
+                <p id="selected-artist">{selectedArtist.name}</p>
+                <p id="selected-title">{currentHeroInfo.title}</p>
+                <p id="selected-materials">{currentHeroInfo.materials}</p>
+                <p id="selected-size">{currentHeroInfo.size}</p>
+                { currentHeroInfo.isForSale ?
+                <Label as={Button} size="large" color='green' horizontal
+                onClick={() => {
+                  window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+                }}
+                >For sale</Label> :
+                <Label color='grey' horizontal>Not for sale</Label>
+                }
+              </div>
               <Image size="massive"
                 src={currentHero}
               />
@@ -134,22 +161,15 @@ const Artists = (artist) => {
             }
           </div>
         </div>
-        <div className="artist-showcase-fullsize">
-          <div className="artist-statement">
-            <h1>{selectedArtist.name}</h1>
-            <ArtistBio bioInfo={selectedArtist.bio}/>
-          </div>
-          <div className="artist-photo">
-            <img src={selectedArtist.artistPhoto} />
-          </div>
-        </div>
         <div className="artist-showcase-mobile">
           <div className="artist-statement">
             <h1>{selectedArtist.name}</h1>
             <div className="artist-photo">
               <img src={selectedArtist.artistPhoto} />
             </div>
-            <ArtistBio bioInfo={selectedArtist.bio} />
+            <div className="artist-text">
+              <p>{selectedArtist.bio}</p>
+            </div>
           </div>
         </div>
         <div className="artist-grid-mobile">
