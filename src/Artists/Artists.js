@@ -86,37 +86,12 @@ const Artists = (artist) => {
             basic
             open={open}
             size="large"
+            closeIcon
             onClose={() => setOpen(false)}
             onOpen={() => setOpen(true)}
             dimmer="blurring"
           >
-          <Modal.Actions>
-            <Button.Group size="large">
-              <Button as="a" circular
-              onClick={() => {
-                window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
-              }}
-              icon="heart"
-              >
-              </Button>
-              <Button circular onClick={() => setOpen(false)} icon="close">
-              </Button>
-            </Button.Group>
-          </Modal.Actions>
             <Modal.Content>
-              <Label color="black" id="artistWorkDetails" size="large" ribbon>
-                <p id="detail-title">{currentHeroInfo.title}</p>
-                <p id="detail-materials">{currentHeroInfo.materials}</p>
-                <p id="detail-size">{currentHeroInfo.size}</p>
-                { currentHeroInfo.isForSale ?
-                <Label as={Button} size="large" color='green' horizontal
-                onClick={() => {
-                  window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
-                }}
-                >For sale</Label> :
-                <Label color='grey' horizontal>Not for sale</Label>
-                }
-              </Label>
               <div className="artist-label">
                 <p id="selected-artist">{selectedArtist.name}</p>
                 <p id="selected-title">{currentHeroInfo.title}</p>
@@ -127,7 +102,7 @@ const Artists = (artist) => {
                 onClick={() => {
                   window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
                 }}
-                >For sale</Label> :
+                >For sale - enquire</Label> :
                 <Label color='grey' horizontal>Not for sale</Label>
                 }
               </div>

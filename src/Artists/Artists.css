@@ -109,7 +109,7 @@
      }
 
      .artist-select .artist-hero {
-       height: 63vh;
+       height: 55vh;
        width: 100%;
        display: flex;
      }
@@ -119,42 +119,42 @@
      }
 
      .artist-select .artist-page .artist-hero #artistHero {
-       max-height: 63vh;
+       max-height: 55vh;
        max-width: auto;
      }
 
-     .artist-select .artist-page .artist-label {
-       height: 10vh;
+     .artist-label {
+       height: 12vh;
        width: 17vw;
        word-wrap: break-word;
        text-align: left;
-       padding: 0.5vw;
+       padding: 0.8vw;
        background-color: #343434;
        float: left;
        position: absolute;
-       left: 10vw;
+       right: 10vw;
        top: 4vh;
        z-index: 1000;
        box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
      }
 
-     .artist-select .artist-page .artist-label p {
+     .artist-label p {
        margin: 0;
        color: white;
        font-family: inherit;
      }
 
-     #select-artist {
-       font-size: 1.25em;
+     #selected-artist {
+       font-size: 1.05em;
      }
 
-     #select-title {
+     #selected-title {
        font-size: 1.25em;
        font-style: italic;
        font-weight: 700;
      }
 
-     #select-materials {
+     #selected-materials {
        font-size: 0.75em;
      }
 
@@ -188,15 +188,15 @@
      }
 
           .artist-select .artist-page .artist-hero .artist-showcase-fullsize {
-            height: 62vh;
+            height: 55vh;
             width: 40%;
             display: block;
             margin-left: 5vw;
           }
 
           .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-photo {
-            max-width: 25vw;
-            max-height: 40vh;
+            max-width: 20vw;
+            max-height: 35vh;
             float: right;
             margin: 1vw;
           }
@@ -204,6 +204,7 @@
           .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-text {
             height: 100%;
             padding: 1vw;
+            white-space: pre-line;
           }
 
           .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement {
