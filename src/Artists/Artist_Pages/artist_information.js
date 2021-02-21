@@ -255,7 +255,7 @@ export const artistsImage = [
         },
       ],
       artistPhoto: require("../artist_details/Gennaro_Barci/artist_img.jpg"),
-      bio: "The artist started painting in 2006 and after about one year of tests, he decided to stop in order to study the processes of interaction between colours: two enamels poured on an even support tend to blend autonomously. He realized that through this phenomenon – which he defined as “blending” – it was possible to depersonalise the product of the creative act and reach concepts that transcend reality. By employing a transparent material called “methacrylate”, the sculptor noticed that the colors blended on one side of the support. On its other side, instead, the first moment of the pictorial act remained imprinted, revealing the mark left by the colour before the process of depersonalisation. Hence, he decided to mould the painted support so that the two moments of metamorphosis could be shown and made available to the public. The artist published his first writings in a small and self released catalogue in 2009, called Il Sé Transpersonale (literally The Transpersonal Self). In 2011, he approached Il Metaformismo, by professor Giulia Sillato. She led him to show his work in several prestigious exhibitions held in different places, such as Chiostro del Bramante in Rome, Palazzo dei Giureconsulti in Milan and Palazzo della Gran Guardia in Verona, all combined with important publications edited by Mazzotta and Mondadori. During the same year, the sculptor wrote another text in the volume Il Metaformismo, published by Mondadori and curated by professor Giulia Sillato. In 2014, after examining in depth the critical survey on Metaforma for years, the artist published his own programmatic formulation about Seconda Forma (literally Second Form). In short, the artist declared that it is necessary to face a first phase of depersonalisation of the creative moment through a painting act in order to describe all the concepts related to the incorporeal. Then, there is a second phase of sculptural process, during which the creation is brought back to a corporeal level and becomes available to the observer."
+      bio: "The artist started painting in 2006 and after about one year of tests, he decided to stop in order to study the processes of interaction between colours: two enamels poured on an even support tend to blend autonomously. He realized that through this phenomenon – which he defined as “blending” – it was possible to depersonalise the product of the creative act and reach concepts that transcend reality. By employing a transparent material called “methacrylate”, the sculptor noticed that the colors blended on one side of the support. On its other side, instead, the first moment of the pictorial act remained imprinted, revealing the mark left by the colour before the process of depersonalisation. Hence, he decided to mould the painted support so that the two moments of metamorphosis could be shown and made available to the public. The artist published his first writings in a small and self released catalogue in 2009, called Il Sé Transpersonale (literally The Transpersonal Self). /n In 2011, he approached Il Metaformismo, by professor Giulia Sillato. She led him to show his work in several prestigious exhibitions held in different places, such as Chiostro del Bramante in Rome, Palazzo dei Giureconsulti in Milan and Palazzo della Gran Guardia in Verona, all combined with important publications edited by Mazzotta and Mondadori. During the same year, the sculptor wrote another text in the volume Il Metaformismo, published by Mondadori and curated by professor Giulia Sillato. In 2014, after examining in depth the critical survey on Metaforma for years, the artist published his own programmatic formulation about Seconda Forma (literally Second Form). In short, the artist declared that it is necessary to face a first phase of depersonalisation of the creative moment through a painting act in order to describe all the concepts related to the incorporeal. Then, there is a second phase of sculptural process, during which the creation is brought back to a corporeal level and becomes available to the observer."
     },
     {
       name: "Dorothy F. Boyer",
@@ -456,6 +456,67 @@ export const artistsImage = [
       bio: "I used to paint murals in London and Saudi Arabia and held workshops on Trompe L'oeil painting and on fantasy and antiquing effects. I also taught drawing and painting at Darat Binzagr in Jeddah. My work is a celebration of what I find beautiful, exotic and interesting. It is a visual response to the light and how it changes the simplest and often mundane objects into fascinating forms. Without light there is no life and no joy, and that is what I paint. I want people to feel that uplifting joy and to see and appreciate what we all have in common, a need to be uplifted."
     },
     {
+      name: "Trudie Canwood",
+      workPromo: {
+        image: require("../artist_details/Trudie_Canwood/2019-06 100x80.jpg"),
+        heroDetails: {
+          name: "Trudie Canwood",
+          title: "Nighttime Keeper Lady - Lantern",
+          materials: "Hand rolled aluminum/wire/paper on board",
+        }
+      },
+      link: '/Trudie_Canwood',
+      works: [
+        {
+          image: require("../artist_details/Trudie_Canwood/2020-18 kleiner.jpg"),
+          details: {
+            title: "unknown",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Trudie_Canwood/2020-19.jpg"),
+          details: {
+            title: "unknown",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Trudie_Canwood/2020-23 kleiner.jpg"),
+          details: {
+            title: "unknown",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Trudie_Canwood/2020-26 wit rood 50x50 kleiner.jpg"),
+          details: {
+            title: "unknown",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Trudie_Canwood/2020-27 wit blauw 60x60.jpg"),
+          details: {
+            title: "unknown",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+      ],
+      artistPhoto: require("../artist_details/Trudie_Canwood/foto Trudie.jpg"),
+      bio: "Trudie Canwood-Kruger (Arnhem, The Netherlands, 1961) is a professional artist. As a child she used to draw, paint and sew all the time. After high school she studied textile design and interior design but for a long time she hardly used her skills professionally.  In 2003, after spending a month on the beautiful caribbean island of Curaçao, she started painting. This work, in bright effulgent colours and inspired on her mother-in-law and daily caribbean life, had an unmistakable carribbean feel. Almost immediately Canwood's painting career really takes off and in 2009 she was able to quit her part time job to become a full-time artist. Nowadays she mainly paints landscapes in a completely different style inspired on (childhood) memories, trips and holidays. “When I start painting these landscapes, most of the time I have no idea where I’m going. The work grows along the way and it’s always a struggle to decide when it’s finished”. Canwood had exhibitions in New York, London, Amsterdam, Copenhagen, Aruba, Nevis and more. In 2011 for the first time a solo-exhibition was completely sold out. Her work is used for postcards, mugs, place mats, several books, packaging and art diaries etc."
+    },
+    {
       name: "Cathie Crawford",
       workPromo: {
         image: require("../artist_details/Cathie_Crawford/Anima_Mundi_1440.jpg"),
@@ -596,6 +657,76 @@ export const artistsImage = [
       ],
       artistPhoto: require("../artist_details/Cathie_Crawford/Craig Stocks photo of me 1440.jpg"),
       bio: "Water theme images have been a constant source of inspiration throughout my printmaking career. I have also always been deeply enamored with the ever-changing hues of water, sky and land. I use color for its emotional impact. Taking a break from my figurative work, these reduction woodcuts are more non-objective. This new direction is the converging of color, line, shape, and texture in an ambiguous space with whispers of landscape."
+    },
+    {
+      name: "Lisa DeLong",
+      workPromo: {
+        image: require("../artist_details/Lisa_DeLong/Hope.jpeg"),
+        heroDetails: {
+          name: "Lisa DeLong",
+          title: "Hope",
+          materials: "unknown",
+        }
+      },
+      link: '/Lisa_DeLong',
+      works: [
+        {
+          image: require("../artist_details/Lisa_DeLong/Hope.jpeg"),
+          details: {
+            title: "Hope",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Lisa_DeLong/Lisa DeLong - Cloth of Honour.jpeg"),
+          details: {
+            title: "Cloth of Honor",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Lisa_DeLong/Malachite Medley.JPG"),
+          details: {
+            title: "Malachite Medley",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Lisa_DeLong/One Minute More.jpeg"),
+          details: {
+            title: "One Minute More",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Lisa_DeLong/Tangled up in Blue.jpeg"),
+          details: {
+            title: "Tangled Up in Blue",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Lisa_DeLong/Web of Life.JPG"),
+          details: {
+            title: "Web of Life",
+            materials: "unknown",
+            size: "unknown",
+            isForSale: true
+          }
+        },
+      ],
+      artistPhoto: require("../artist_details/Trudie_Canwood/foto Trudie.jpg"),
+      bio: "Trudie Canwood-Kruger (Arnhem, The Netherlands, 1961) is a professional artist. As a child she used to draw, paint and sew all the time. After high school she studied textile design and interior design but for a long time she hardly used her skills professionally.  In 2003, after spending a month on the beautiful caribbean island of Curaçao, she started painting. This work, in bright effulgent colours and inspired on her mother-in-law and daily caribbean life, had an unmistakable carribbean feel. Almost immediately Canwood's painting career really takes off and in 2009 she was able to quit her part time job to become a full-time artist. Nowadays she mainly paints landscapes in a completely different style inspired on (childhood) memories, trips and holidays. “When I start painting these landscapes, most of the time I have no idea where I’m going. The work grows along the way and it’s always a struggle to decide when it’s finished”. Canwood had exhibitions in New York, London, Amsterdam, Copenhagen, Aruba, Nevis and more. In 2011 for the first time a solo-exhibition was completely sold out. Her work is used for postcards, mugs, place mats, several books, packaging and art diaries etc."
     },
     {
       name: "Joan Drescher",
