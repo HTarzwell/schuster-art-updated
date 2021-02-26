@@ -461,8 +461,8 @@ export const artistsImage = [
         image: require("../artist_details/Trudie_Canwood/2019-06 100x80.jpg"),
         heroDetails: {
           name: "Trudie Canwood",
-          title: "Nighttime Keeper Lady - Lantern",
-          materials: "Hand rolled aluminum/wire/paper on board",
+          title: "2019-06",
+          materials: "Acrylic on canvas",
         }
       },
       link: '/Trudie_Canwood',
@@ -470,45 +470,45 @@ export const artistsImage = [
         {
           image: require("../artist_details/Trudie_Canwood/2020-18 kleiner.jpg"),
           details: {
-            title: "unknown",
-            materials: "unknown",
-            size: "unknown",
+            title: "2020-18",
+            materials: "Acrylic on canvas",
+            size: "50x50cm",
             isForSale: true
           }
         },
         {
           image: require("../artist_details/Trudie_Canwood/2020-19.jpg"),
           details: {
-            title: "unknown",
-            materials: "unknown",
-            size: "unknown",
+            title: "2020-19",
+            materials: "acrylic on canvas",
+            size: "15x15cm",
             isForSale: true
           }
         },
         {
           image: require("../artist_details/Trudie_Canwood/2020-23 kleiner.jpg"),
           details: {
-            title: "unknown",
-            materials: "unknown",
-            size: "unknown",
+            title: "2020-23",
+            materials: "acrylic on canvas",
+            size: "50 x 50cm",
             isForSale: true
           }
         },
         {
           image: require("../artist_details/Trudie_Canwood/2020-26 wit rood 50x50 kleiner.jpg"),
           details: {
-            title: "unknown",
-            materials: "unknown",
-            size: "unknown",
+            title: "2020-26",
+            materials: "acrylic on canvas",
+            size: "50 x 50cm",
             isForSale: true
           }
         },
         {
           image: require("../artist_details/Trudie_Canwood/2020-27 wit blauw 60x60.jpg"),
           details: {
-            title: "unknown",
-            materials: "unknown",
-            size: "unknown",
+            title: "2020-27",
+            materials: "acrylic on canvas",
+            size: "60 x 60cm",
             isForSale: true
           }
         },
@@ -974,6 +974,214 @@ export const artistsImage = [
       ],
       artistPhoto: require("../artist_details/Angela_M_Franco/franco_photo.jpg"),
       bio: "From these past months, my work has traveled through deep and sensitive expressions, wanting to create a translucent variety of sensations in every other layer capable of captivating the peculiarity of the sounds of my soul, the smell of my days, and feelings of what life has brought upon me and surrounded with I am. So, I have work my oils, water or pastels and pencils with time, and not looking to create a discord or heaviness between the space and the story I have dive into the canvas or paper with unobtrusive touch. Colors are to smoothly or firmly conquer the surface without covering the air needed, so it breathes letting this way transparency be the music that appears between colors and my forms. I am looking to give to my work of art a voice to be listen in one's heart; and like a poem, the viewer will read across the space created, to then with freely intervals that textures and colors give away let the story of a life be upon one's eyes."
+    },
+    {
+      name: "Morgan McKenna",
+      workPromo: {
+        image: require("../artist_details/Morgan_McKenna/McKenna Venus.jpg"),
+        heroDetails: {
+          name: "Morgan McKenna",
+          title: "Venus",
+          materials: "Photography",
+        }
+      },
+      link: 'Morgan_McKenna',
+      works: [
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Blue Grid 7.jpg"),
+          details: {
+            title: "Blue Grid 7",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/Mckenna Drawn In.jpg"),
+          details: {
+            title: "Drawn In",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Duality.jpg"),
+          details: {
+            title: "Duality",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Finisterre.jpg"),
+          details: {
+            title: "Finisterre",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Illumine.jpg"),
+          details: {
+            title: "Illumine",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Inland Passage.jpg"),
+          details: {
+            title: "Inland Passage",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Last Stand.jpg"),
+          details: {
+            title: "Last Stand",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Layers.jpg"),
+          details: {
+            title: "Layers",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Liquid Autumn.jpg"),
+          details: {
+            title: "Liquid Autumn",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Lotus.jpg"),
+          details: {
+            title: "Lotus",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKEnna Midas Beach.jpg"),
+          details: {
+            title: "Midas Beach",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Millennia.jpg"),
+          details: {
+            title: "Millennia",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Montage.jpg"),
+          details: {
+            title: "Montage",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Orange Rain.jpg"),
+          details: {
+            title: "Orange Rain",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Patina.jpg"),
+          details: {
+            title: "Patina",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Plaid.jpg"),
+          details: {
+            title: "Plaid",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Porcelain.jpg"),
+          details: {
+            title: "Porcelain",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Primeval.jpg"),
+          details: {
+            title: "Primeval",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Rain on Maples 1.jpg"),
+          details: {
+            title: "Rain on Maples 1",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Reverie.jpg"),
+          details: {
+            title: "Reverie",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Ritual.jpg"),
+          details: {
+            title: "Ritual",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Tiffany.jpg"),
+          details: {
+            title: "Tiffany",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Sarabande.jpg"),
+          details: {
+            title: "Sarabande",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+        {
+          image: require("../artist_details/Morgan_McKenna/McKenna Venus.jpg"),
+          details: {
+            title: "Venus",
+            materials: "Photography",
+            isForSale: true
+          }
+        },
+      ],
+      artistPhoto: require("../artist_details/Morgan_McKenna/Morgan Portrait Photographer.jpg"),
+      bio: "Morgan Leigh McKenna has been photographing nature since her childhood in the Rocky Mountain west. In the words of one of her longtime clients, “There is a deep knowing and mystery in McKenna’s work. Her intimate renditions of flowers, botanicals, and water evoke wonder and a healing presence in a world that needs more of both."
     },
     {
       name: "Toby Penney",
