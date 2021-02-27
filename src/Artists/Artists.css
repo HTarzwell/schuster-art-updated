@@ -115,7 +115,7 @@
      }
 
      .artist-select .artist-page .artist-hero .artist-hero-image {
-       width: 60%;
+       width: 55%;
      }
 
      .artist-select .artist-page .artist-hero #artistHero {
@@ -159,9 +159,9 @@
      }
 
      .artist-select .artist-hero #artistHero:hover {
-       transform: scale(.95);
+       transform: scale(1.1);
        transition: transform .3s ease;
-       box-shadow: 0px 0px 7px #343434;
+       box-shadow: 0 1vh 2vh rgba(0,0,0,1), 0 1vh 2vh rgba(0,0,0,1);
        cursor: pointer;
      }
 
@@ -187,35 +187,39 @@
        visibility: hidden;
      }
 
-          .artist-select .artist-page .artist-hero .artist-showcase-fullsize {
-            height: 55vh;
-            width: 40%;
-            display: block;
-            margin-left: 5vw;
-          }
+     .artist-select .artist-page .artist-hero .artist-showcase-fullsize {
+      height: 55vh;
+      width: 45%;
+      display: block;
+      margin-left: 5vw;
+    }
 
-          .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-photo {
-            max-width: 20vw;
-            max-height: 35vh;
-            float: right;
-            margin: 1vw;
-          }
+    .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-photo {
+      max-width: 20vw;
+      max-height: 35vh;
+      float: right;
+      margin: 1vw;
+    }
 
-          .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-text {
-            height: 100%;
-            padding: 1vw;
-            white-space: pre-line;
-          }
+    .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-text {
+      height: 100%;
+      padding: 1vw;
+    }
 
-          .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement {
-            height: 100%;
-            text-align: left;
-          }
+    .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement .artist-text p {
+      white-space: pre-line;
+      font-size: 1.2em;
+    }
 
-          .artist-select .artist-page .artist-showcase-fullsize .artist-statement .artist-photo img {
-            max-width: 20vw;
-            max-height: 40vh;
-          }
+    .artist-select .artist-page .artist-hero .artist-showcase-fullsize .artist-statement {
+      height: 100%;
+      text-align: left;
+    }
+
+    .artist-select .artist-page .artist-showcase-fullsize .artist-statement .artist-photo img {
+      max-width: 20vw;
+      max-height: 35vh;
+    }
 
      .artist-carousel .rightArrow .fa-icon {
        visibility: hidden;

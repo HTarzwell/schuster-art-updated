@@ -98,7 +98,7 @@ const Artists = (artist) => {
                 <p id="selected-materials">{currentHeroInfo.materials}</p>
                 <p id="selected-size">{currentHeroInfo.size}</p>
                 { currentHeroInfo.isForSale ?
-                <Label as={Button} size="large" color='green' horizontal
+                <Label as={Button} size="medium" color='green' horizontal
                 onClick={() => {
                   window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
                 }}
