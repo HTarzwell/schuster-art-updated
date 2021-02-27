@@ -93,17 +93,17 @@ const Artists = (artist) => {
           >
             <Modal.Content>
               <div className="artist-label">
-                <p id="selected-artist">{selectedArtist.name}</p>
-                <p id="selected-title">{currentHeroInfo.title}</p>
-                <p id="selected-materials">{currentHeroInfo.materials}</p>
-                <p id="selected-size">{currentHeroInfo.size}</p>
+                <p className="selected-artist">{selectedArtist.name}</p>
+                <p className="selected-title">{currentHeroInfo.title}</p>
+                <p className="selected-materials">{currentHeroInfo.materials}</p>
+                <p className="selected-size">{currentHeroInfo.size}</p>
                 { currentHeroInfo.isForSale ?
-                <Label as={Button} size="medium" color='green' horizontal
+                <Label as='a' size="medium" color='teal' attached="top right" tag icon="mail"
                 onClick={() => {
                   window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
                 }}
-                >For sale - enquire</Label> :
-                <Label color='grey' horizontal>Not for sale</Label>
+                >For sale</Label> :
+                <Label color='grey' horizontal tag>Not for sale</Label>
                 }
               </div>
               <Image size="massive"
@@ -160,48 +160,41 @@ const Artists = (artist) => {
                 </Grid.Column>
               );
             })}
-            </Grid>
+          </Grid>
+          {gridInfo &&
             <Modal
               basic
               as={Image}
               open={openMobile}
+              closeIcon
               size="large"
               onClose={() => setOpenMobile(false)}
               onOpen={() => setOpenMobile(true)}
               dimmer="blurring"
             >
-            {gridInfo &&
               <Modal.Content>
-                <Label id="artistWorkDetails" size="large" color="black" ribbon as='a'>
-                  <p id="detail-title">{gridInfo.title}</p>
-                  <p id="detail-materials">{gridInfo.materials}</p>
-                  <p id="detail-size">{gridInfo.size}</p>
+                <div className="artist-label-mobile">
+                  <p className="selected-artist">{selectedArtist.name}</p>
+                  <p className="selected-title">{gridInfo.title}</p>
+                  <p className="selected-materials">{gridInfo.materials}</p>
+                  <p className="selected-size">{gridInfo.size}</p>
                   { gridInfo.isForSale ?
-                  <Label as={Button} size="large" color='green' horizontal
-                  onClick={() => {
-                    window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
-                  }}
-                  >For sale</Label> :
-                  <Label color='grey' horizontal>Not for sale</Label>
+                    <Label as='a' size="medium" color='teal' attached="top right" tag
+                    onClick={() => {
+                      window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo.title}`
+                    }}>
+                      For sale
+                    </Label>
+                      :
+                    <Label size="medium" color='grey' attached="top right" tag>Not for sale</Label>
                   }
-                </Label>
+                </div>
                 <Image size='massive'
                   src={modalImage}
                 />
               </Modal.Content>
-            }
-              <Modal.Actions>
-                <Button.Group size="large">
-                  <Button as="a" circular
-                  onClick={() => {
-                    window.location.href = `mailto:info@schusterartconsultancy.com?subject=${selectedArtist.name}&body=${currentHeroInfo}`
-                  }}
-                  icon="heart"
-                  />
-                  <Button circular onClick={() => setOpenMobile(false)} icon="close" />
-                </Button.Group>
-              </Modal.Actions>
             </Modal>
+            }
         </div>
       </div>
     ) : null

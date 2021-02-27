@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { Icon, Modal, Button, Form, Input, Transition, Message } from "semantic-ui-react";
+import { Icon, Modal, Button, Form, Input, Transition, Message, Popup } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
 import emailjs from 'emailjs-com';
 
@@ -149,6 +149,12 @@ class Main extends Component {
                 <a href="schuster_art_consultancy" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon className="fa-icon" icon={faInstagram} size="2x"/>
                 </a>
+                <Popup trigger={<Icon circular name='file code outline'/>}>
+                  Developed and built by Leni Tarzwell
+                </Popup>
+                <Popup trigger={<Icon circular name='fire'/>}>
+                  Designed by Brent C
+                </Popup>
               </div>
             </div>
         </div>

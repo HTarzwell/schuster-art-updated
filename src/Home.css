@@ -46,6 +46,7 @@
   height: 18vh;
   width: 42vw;
   opacity: 95%;
+  object-fit: cover;
   box-shadow:0px 0px 7px #343434;
 }
 
@@ -60,7 +61,7 @@
        display: flex;
        flex-direction: column;
        align-items: center;
-       height: 84vh;
+       height: 83vh;
        padding-bottom: 1vh;
        padding-top: 1vh;
      }
@@ -240,6 +241,7 @@
        height: 18vh;
        width: 9vw;
        opacity: 50%;
+       object-fit: cover;
      }
 
      .artist-card .artist-card-image:hover {

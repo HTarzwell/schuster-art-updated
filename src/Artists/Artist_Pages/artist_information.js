@@ -725,8 +725,8 @@ export const artistsImage = [
           }
         },
       ],
-      artistPhoto: require("../artist_details/Trudie_Canwood/foto Trudie.jpg"),
-      bio: "Trudie Canwood-Kruger (Arnhem, The Netherlands, 1961) is a professional artist. As a child she used to draw, paint and sew all the time. After high school she studied textile design and interior design but for a long time she hardly used her skills professionally.  In 2003, after spending a month on the beautiful caribbean island of Curaçao, she started painting. This work, in bright effulgent colours and inspired on her mother-in-law and daily caribbean life, had an unmistakable carribbean feel. Almost immediately Canwood's painting career really takes off and in 2009 she was able to quit her part time job to become a full-time artist. Nowadays she mainly paints landscapes in a completely different style inspired on (childhood) memories, trips and holidays. “When I start painting these landscapes, most of the time I have no idea where I’m going. The work grows along the way and it’s always a struggle to decide when it’s finished”. Canwood had exhibitions in New York, London, Amsterdam, Copenhagen, Aruba, Nevis and more. In 2011 for the first time a solo-exhibition was completely sold out. Her work is used for postcards, mugs, place mats, several books, packaging and art diaries etc."
+      artistPhoto: require("../artist_details/Lisa_DeLong/delong_portrait_placeholder.jpeg"),
+      bio: `Lisa DeLong is an artist and educator who currently works for The Prince's School of Traditional Arts in London, designing curricula and conducting art educational programs, teacher training, and product development workshops.  She has taught courses in the art of geometry, symbolism, and traditional design in many parts of the world including Saudi Arabia, Abu Dhabi, Qatar, Syria, Egypt, Malaysia, and Azerbaijan. \n \n Lisa received her PhD in Traditional Art from The Prince's School in 2007. Her paintings are in several important collections, including that of HH President Sheikh Khalifa bin Zayed al Nahyan and HRH The Prince of Wales and she completed a commission for HM Queen Elizabeth II. She is also the author of the book Curves: Flowers, Foliates, and Flourishes in the Formal Decorative Arts.`
     },
     {
       name: "Joan Drescher",
@@ -972,7 +972,7 @@ export const artistsImage = [
           }
         }
       ],
-      artistPhoto: require("../artist_details/Angela_M_Franco/franco_photo.jpg"),
+      artistPhoto: require("../artist_details/Angela_M_Franco/franco_li.jpg"),
       bio: `From these past months, my work has traveled through deep and sensitive expressions, wanting to create a translucent variety of sensations in every other layer capable of captivating the peculiarity of the sounds of my soul, the smell of my days, and feelings of what life has brought upon me and surrounded with I am. \n \n So, I have work my oils, water or pastels and pencils with time, and not looking to create a discord or heaviness between the space and the story I have dive into the canvas or paper with unobtrusive touch. Colors are to smoothly or firmly conquer the surface without covering the air needed, so it breathes letting this way transparency be the music that appears between colors and my forms. \n \n I am looking to give to my work of art a voice to be listen in one's heart; and like a poem, the viewer will read across the space created, to then with freely intervals that textures and colors give away let the story of a life be upon one's eyes.`
     },
     {

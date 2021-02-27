@@ -179,8 +179,9 @@
 
    .App-footer {
      display: flex;
-     height: 6vh;
+     height: 7vh;
      margin-top: 0;
+     justify-content: space-around;
    }
 
    .App-footer .footer-subscribe {
@@ -193,26 +194,33 @@
 
    .subscription-label {
      display: contents;
+     font-weight: 700;
+     font-size: 1.2em;
    }
 
    .subscribe-button {
      width: 9vw;
      height: 4vh;
      margin-left: 1vw;
+     background-color: #232526;
+     color: white;
+     font-weight: 700;
    }
 
    .App-footer .footer-social {
-     width: 25%;
+     width: 20%;
      height: 100%;
      display: flex;
      justify-content: space-around;
    }
 
    .App-footer .footer-info {
-     width: 50%;
+     width: 40%;
      height: 100%;
      display: flex;
      align-items: center;
      justify-content: space-around;
+     font-weight: 700;
+     font-style: italic;
    }
 }
